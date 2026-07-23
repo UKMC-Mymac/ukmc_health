@@ -8,7 +8,7 @@
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link rel="shortcut icon" type="image/x-icon" href="{{ asset('front/assets/img/favicon.ico ') }}">
+	<link rel="shortcut icon" type="image/x-icon" href="{{ asset('front/assets/img/ukmc-favicon.png') }}">
 	<!-- Place favicon.ico ') }} in the root directory -->
 
 	<!-- ========================= CSS here ========================= -->
@@ -78,7 +78,7 @@
 							<div class="col-lg-12">
 								<nav class="navbar navbar-expand-lg">
 									<a class="navbar-brand" href="{{ url('/') }}">
-										<img src="{{ asset('front/assets/img/logo/logo.svg') }}" alt="Logo">
+										<img src="{{ asset('front/assets/img/logo/ukmc.png') }}" alt="Logo">
 									</a>
 									<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 										aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -132,7 +132,7 @@
 				<div class="row">
 					<div class="col-xl-4 col-lg-5 col-md-6">
 						<div class="footer-widget mb-30">
-							<a href="index.html" class="logo"><img src="{{ asset('front/assets/img/logo/logo.svg') }}" alt=""></a>
+							<a href="index.html" class="logo"><img src="{{ asset('front/assets/img/logo/ukmc.png') }}" alt=""></a>
 
 							<h5>UKMC SCHOOL OF HEALTH</5>
 							<p>Why "subject to validation"? UK degrees can only be awarded by recognised universities. Our degree and foundation year programmes are being developed for validation with an established UK university partner: a rigorous process that exists to protect students, and one we wouldn't want any other way. Our diploma programmes follow a separate route through regulated awarding organisations. Register your interest and we'll tell you the moment applications open.</p>
@@ -151,13 +151,12 @@
 						<div class="footer-widget mb-30">
 							<h4>Quick Link</h4>
 							<ul class="footer-links">
-								<li><a href="privacy-privacy.html">Privacy Policy</a></li>
-								<li><a href="cookie-policy.html">Cookie Policy</a></li>
-								<li><a href="accessibility.html">Accessibility Statement </a></li>
-								<li><a href="complaints-procedure.html">Complaints Procedure (pre-launch)</a></li>
-								<li><a href="equality-and-diversity.html">Equality & Diversity Statement</a></li>
-								<li><a href="safeguarding.html">Safeguarding Statement</a></li>
-								<li><a href="contact.html">Contact</a></li>
+								<li><a href="#">Safeguarding</a></li>
+								<li><a href="#">Complaints</a></li>
+								<li><a href="#">Privacy</a></li>
+								<li><a href="accessibility.html">Accessibility </a></li>
+								<li><a href="#">Equality & Diversity</a></li>
+								<li><a href="#">Contact</a></li>
 							</ul>
 						</div>
 					</div>
