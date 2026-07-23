@@ -32,10 +32,14 @@ class HomeController extends Controller
         return view('campus.campus', $data);
     }
 
-    //if change the about page then change the route in web.php
     public function about(){
         $data['page_title'] = 'UKMC | About Us';
         return view('about.about', $data);
+    }
+
+     public function contact(){
+        $data['page_title'] = 'UKMC | Contact';
+        return view('contact.contact', $data);
     }
 
     public function privacy(){
@@ -67,4 +71,6 @@ class HomeController extends Controller
         $data['page_title'] = 'UKMC | Equality & Diversity';
         return view('equality-and-iversity.equality-and-iversity', $data);
     }
+
+    
 }

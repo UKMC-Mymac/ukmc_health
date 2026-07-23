@@ -17,6 +17,7 @@ Route::controller(HomeController::class)->group(function () {
     Route::get('/safeguarding', 'safeguarding');
     Route::get('/complaints', 'complaints');
     Route::get('/equality-and-diversity', 'equality_and_diversity');
+    Route::get('/contact', 'contact');
 });
 
 Route::get('/clear', function () {

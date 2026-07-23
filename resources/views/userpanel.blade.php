@@ -104,9 +104,9 @@
 											<li class="nav-item">
 												<a class="page-scroll" href="{{ url('/about') }}">About</a>
 											</li>
-											<!-- <li class="nav-item">
-												<a class="page-scroll" href="#contact">Contact</a>
-											</li> -->
+											<li class="nav-item">
+												<a class="page-scroll" href="{{ url('/contact') }}">Contact</a>
+											</li> 
 										</ul>
 									</div> <!-- navbar collapse -->
 								</nav> <!-- navbar -->

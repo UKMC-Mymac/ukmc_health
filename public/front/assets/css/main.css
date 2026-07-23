@@ -1840,7 +1840,8 @@ p {
   top: 0;
   left: 0;
   border-radius: 20px;
-  background: #A8DADC;
+  background: #1E2355;
+  opacity: 0.7;
 }
 
 .service-section .service-item:hover .service-icon svg path {

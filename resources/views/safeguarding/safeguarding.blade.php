@@ -66,9 +66,14 @@
                 <div class="col-lg-12 col-md-12">
 					<div class="service-item mb-30">
 						<div class="service-content">
-							<h4></h4>
-							<p></p>
-							<p></p>
+							<h4>What we commit to</h4>
+							<ul>
+                                <li>1. Recruiting staff safely, including the appropriate background and DBS checks for roles that require them.</li>
+                                <li>2. Making sure our people understand their safeguarding responsibilities and are trained for them.</li>
+                                <li>3. Providing clear, accessible ways for anyone to raise a concern, and taking every concern seriously.</li>
+                                <li>4. Working with local authorities, the police and other agencies where a child or adult at risk may be in danger</li>
+                                <li>5. Meeting our duties under the Prevent duty as they apply to us as an education provider.</li>
+                            </ul>
 						</div>
 						<div class="service-overlay img-bg"></div>
 					</div>
@@ -77,31 +82,9 @@
                 <div class="col-lg-12 col-md-12">
 					<div class="service-item mb-30">
 						<div class="service-content">
-							<h4></h4>
-							<p></p>
-							<p></p>
-						</div>
-						<div class="service-overlay img-bg"></div>
-					</div>
-				</div>
-
-                <div class="col-lg-12 col-md-12">
-					<div class="service-item mb-30">
-						<div class="service-content">
-							<h4></h4>
-							<p></p>
-							<p></p>
-						</div>
-						<div class="service-overlay img-bg"></div>
-					</div>
-				</div>
-
-                <div class="col-lg-12 col-md-12">
-					<div class="service-item mb-30">
-						<div class="service-content">
-							<h4></h4>
-							<p></p>
-							<p></p>
+							<h4>Raising a concern</h4>
+							<p>If you're worried about the safety or wellbeing of yourself or someone else, contact our Designated Safeguarding Lead using the details above. If someone is in immediate danger, call the emergency services on 999.</p>
+							<p style="border-left: 2px solid red; padding-left-5px;"><span class="text-bold text-danger">REVIEW REQUIRED:</span> Safeguarding must be owned and signed off by your Designated Safeguarding Lead or a qualified safeguarding adviser, not published as a copy draft. The named DSL is a hard prerequisite. The detail required will grow significantly once you enrol students, and especially if any are under 18 - at that point a full policy aligned to the relevant statutory guidance is needed, not this statement alone.</p>
 						</div>
 						<div class="service-overlay img-bg"></div>
 					</div>
