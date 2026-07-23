@@ -48,6 +48,11 @@ class HomeController extends Controller
         return view('cookie-policy.cookie-policy', $data);
     }
 
+    public function accessibility(){
+        $data['page_title'] = 'UKMC | Accessibility';
+        return view('accessibility.accessibility', $data);
+    }
+
     public function safeguarding(){
         $data['page_title'] = 'UKMC | Safeguarding';
         return view('safeguarding.safeguarding', $data);

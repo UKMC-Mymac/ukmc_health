@@ -13,6 +13,7 @@ Route::controller(HomeController::class)->group(function () {
     Route::get('/about', 'about');
     Route::get('/privacy', 'privacy');
     Route::get('/cookie-policy', 'cookie_policy');
+    Route::get('/accessibility', 'accessibility');
     Route::get('/safeguarding', 'safeguarding');
     Route::get('/complaints', 'complaints');
     Route::get('/equality-and-diversity', 'equality_and_diversity');

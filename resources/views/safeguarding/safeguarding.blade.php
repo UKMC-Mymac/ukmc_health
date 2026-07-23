@@ -34,6 +34,38 @@
                 <div class="col-lg-12 col-md-12">
 					<div class="service-item mb-30">
 						<div class="service-content">
+							<h4>Safeguarding Statement</h4>
+							<p>The safety and wellbeing of the people who study with us, including any who are under 18 or who are adults at risk, is something we take seriously. This statement sets out our commitment and how to raise a concern. A fuller safeguarding policy sits behind it and governs how we act in detail.</p>
+							<p>Last reviewed: [date].</p>
+						</div>
+						<div class="service-overlay img-bg"></div>
+					</div>
+				</div>
+
+                <div class="col-lg-12 col-md-12">
+					<div class="service-item mb-30">
+						<div class="service-content">
+							<h4>Who this applies to</h4>
+							<p>It applies to everyone connected with UKMC School of Health: our staff, our students, and anyone visiting or working with us.</p>
+						</div>
+						<div class="service-overlay img-bg"></div>
+					</div>
+				</div>
+
+                <div class="col-lg-12 col-md-12">
+					<div class="service-item mb-30">
+						<div class="service-content">
+							<h4>Our Designated Safeguarding Lead</h4>
+							<p>Responsibility for safeguarding sits with our Designated Safeguarding Lead, who is the first point of contact for any concern.</p>
+							<p class="text-danger">[PLACEHOLDER: Designated Safeguarding Lead name, role and contact details. Until appointed (see leadership planning), this is a required gap to close before publication.]</p>
+						</div>
+						<div class="service-overlay img-bg"></div>
+					</div>
+				</div>
+
+                <div class="col-lg-12 col-md-12">
+					<div class="service-item mb-30">
+						<div class="service-content">
 							<h4></h4>
 							<p></p>
 							<p></p>

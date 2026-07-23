@@ -9,7 +9,7 @@
                     <div class="row">
                         <div class="col-xl-9 col-lg-8 col-md-10">
                             <div class="slider-content">
-                                <h1 data-animation="fadeInDown" data-duration="1.5s" data-delay=".5s">Complaints</h1>
+                                <h1 data-animation="fadeInDown" data-duration="1.5s" data-delay=".5s">Accessibility Statement</h1>
                                 <p data-animation="fadeInLeft" data-duration="1.5s" data-delay=".7s"></p>
                                 
                             </div>
@@ -34,9 +34,9 @@
                 <div class="col-lg-12 col-md-12">
 					<div class="service-item mb-30">
 						<div class="service-content">
-							<h4>Complaints Procedure</h4>
-							<p>We're building UKMC School of Health carefully, and we want to know when something isn't right. If you're unhappy with anything in your dealings with us, please tell us, and we'll take it seriously.</p>
-							<p><i>This is our pre-launch complaints route. It will be expanded into a fuller procedure once we are delivering validated programmes.</i></p>
+							<h4>Accessibility Statement</h4>
+							<p>We want UKMC School of Health's website to be usable by as many people as possible, whatever their abilities or the technology they use.</p>
+							<p>Last reviewed: [date].</p>
 						</div>
 						<div class="service-overlay img-bg"></div>
 					</div>
@@ -45,9 +45,8 @@
                 <div class="col-lg-12 col-md-12">
 					<div class="service-item mb-30">
 						<div class="service-content">
-							<h4>How to raise a complaint</h4>
-							<p>Get in touch with us, set out what's gone wrong and what you'd like us to do about it, and give us a way to contact you.</p>
-							<p class="text-danger">[PLACEHOLDER: Complaints contact (email and/or postal address) and the name or role of the person who handles complaints.]</p>
+							<h4>Our commitment</h4>
+							<p>We are building this site to meet the Web Content Accessibility Guidelines (WCAG) version 2.2 at level AA. In practice that means clear structure, text that works with screen readers, navigation that works with a keyboard, good colour contrast, descriptive alternatives for images, and forms that are properly labelled.</p>
 						</div>
 						<div class="service-overlay img-bg"></div>
 					</div>
@@ -56,9 +55,9 @@
                 <div class="col-lg-12 col-md-12">
 					<div class="service-item mb-30">
 						<div class="service-content">
-							<h4>What happens next</h4>
-							<p>We'll acknowledge your complaint, look into it properly, and come back to you with a response.</p>
-							<p class="text-danger">[PLACEHOLDER: State realistic timescales you can actually meet, e.g. acknowledge within [X] working days and respond within [X] working days.]</p>
+							<h4>Known limitations</h4>
+							<p>As a new website we're still improving. If we're aware of parts of the site that don't yet meet the standard, we'll list them here honestly.</p>
+							<p class="text-danger"><span class="text-bold">[PLACEHOLDER:</span> List any known accessibility gaps once the build is tested, or state that none are currently known.]</p>
 						</div>
 						<div class="service-overlay img-bg"></div>
 					</div>
@@ -67,16 +66,24 @@
                 <div class="col-lg-12 col-md-12">
 					<div class="service-item mb-30">
 						<div class="service-content">
-							<h4>If you're still not happy</h4>
-							<p>If our response doesn't resolve things, you can ask for it to be reviewed by a senior member of our team.</p>
-							<p class="text-danger">[PLACEHOLDER: Name the senior escalation contact or role.]</p>
-                            <p>Once we are delivering validated higher education programmes, additional external routes will apply, including our university partner's complaints procedures and, for eligible higher education complaints, the Office of the Independent Adjudicator (OIA). We'll add these to this procedure at that stage.</p>
-                            <p style="border-left: 2px solid red; padding-left-5px;"><span class="text-bold text-danger">REVIEW REQUIRED:</span> Keep the timescales honest - only publish response times you can meet at pre-launch. Expand to the full multi-stage procedure (including partner and OIA routes) when validated delivery begins.</p>
+							<h4>Tell us if something doesn't work</h4>
+							<p>If you find any part of the site difficult to use, please tell us. We'll do our best to help and to fix the problem.</p>
+							<p class="text-danger"><span class="text-bold">[PLACEHOLDER:</span> Accessibility contact email.]</p>
 						</div>
 						<div class="service-overlay img-bg"></div>
 					</div>
 				</div>
-                
+
+                <div class="col-lg-12 col-md-12">
+					<div class="service-item mb-30">
+						<div class="service-content">
+							<h4>If you're not happy with our response</h4>
+							<p>If you contact us with a problem and you're not satisfied with how we respond, the Equality Advisory and Support Service (EASS) can advise you.</p>
+							<p style="border-left: 2px solid red; padding-left-5px;"><span class="text-bold text-danger">REVIEW REQUIRED:</span> This statement must reflect the accessibility level the site genuinely achieves. Confirm with your developer that WCAG 2.2 AA is the build target and is met before claiming it. Adjust the wording if the achieved level differs.</p>
+						</div>
+						<div class="service-overlay img-bg"></div>
+					</div>
+				</div>
 
 			</div>
 		</div>

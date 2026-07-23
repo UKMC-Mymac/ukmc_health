@@ -34,9 +34,9 @@
                 <div class="col-lg-12 col-md-12">
 					<div class="service-item mb-30">
 						<div class="service-content">
-							<h4></h4>
-							<p></p>
-							<p></p>
+							<h4>Cookie Policy</h4>
+							<p>Cookies are small files stored on your device when you visit a website. They help sites work properly and help owners understand how their site is used.</p>
+							<p>Last updated: [date].</p>
 						</div>
 						<div class="service-overlay img-bg"></div>
 					</div>
@@ -45,9 +45,10 @@
                 <div class="col-lg-12 col-md-12">
 					<div class="service-item mb-30">
 						<div class="service-content">
-							<h4></h4>
-							<p></p>
-							<p></p>
+							<h4>The cookies we use</h4>
+							<p>Strictly necessary cookies: these make the site work and keep it secure. They can't be switched off.</p>
+							<p>Analytics and performance cookies: these help us understand how people use the site so we can improve it. We only use these with your consent.</p>
+                            <p class="text-danger"><span class="text-bold">[PLACEHOLDER:</span> Replace the above with the actual cookies in use at launch: name them, say what each does, who sets it (first or third party), and how long it lasts. If marketing/advertising cookies are used, disclose them too. If only strictly necessary cookies are used at launch, say exactly that - it's the simplest and safest position.]</p>
 						</div>
 						<div class="service-overlay img-bg"></div>
 					</div>
@@ -56,9 +57,9 @@
                 <div class="col-lg-12 col-md-12">
 					<div class="service-item mb-30">
 						<div class="service-content">
-							<h4></h4>
-							<p></p>
-							<p></p>
+							<h4>Managing your cookies</h4>
+							<p>When you first visit, you'll be able to accept or reject non-essential cookies through our cookie banner, and you can change your choice at any time. You can also control cookies through your browser settings, though blocking some may affect how the site works.</p>
+							<p style="border-left: 2px solid red; padding-left-5px;"><span class="text-bold text-danger">REVIEW REQUIRED:</span> Confirm the real cookie inventory with your developer and align the banner so it only sets non-essential cookies after consent. The banner must default to the most privacy-preserving option.</p>
 						</div>
 						<div class="service-overlay img-bg"></div>
 					</div>
