@@ -12,6 +12,16 @@ class HomeController extends Controller
         return view('home.index', $data);
     }
 
+    public function programs(){
+        $data['page_title'] = 'UKMC | Programs';
+        return view('programs.programs', $data);
+    }
+
+    public function programs_detail(){
+        $data['page_title'] = 'UKMC | Medical Sciences BSc (Hons), with Foundation Year route';
+        return view('programs.programs-detail', $data);
+    }
+
     public function why_us(){
         $data['page_title'] = 'UKMC | Why us';
         return view('why-us.why-us', $data);
