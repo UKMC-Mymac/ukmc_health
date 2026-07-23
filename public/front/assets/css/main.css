@@ -1648,6 +1648,8 @@ p {
   padding: 190px 0 200px;
 }
 
+
+
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .slider-section .single-slider .slider-content {
     padding: 160px 0;
@@ -2301,3 +2303,15 @@ p {
   color: #00ADB5;
 }
 /*# sourceMappingURL=main.css.map */
+
+/* Campus  */
+
+.whats_inside li b,
+.whats_inside li i{
+  color: red;
+}
+
+/* Page */
+#p_banner .slider-content {
+  padding: 30px 0 30px !important;
+}

@@ -1,5 +1,45 @@
 @extends('userpanel')
 @section('content')
+<div class="slider-wrapper">
+	<!-- ========================= slider-section start ========================= -->
+	<section class="slider-section">
+		<div class="slider-active slick-style">
+			<div class="single-slider img-bg" style="background-image:url('{{ asset('front/assets/img/slider/slider-1.jpg') }}');">
+				<div class="container">
+					<div class="row">
+						<div class="col-xl-7 col-lg-8 col-md-10">
+							<div class="slider-content">
+								<h1 data-animation="fadeInDown" data-duration="1.5s" data-delay=".5s">Your route into healthcare starts here.
+								</h1>
+								<p data-animation="fadeInLeft" data-duration="1.5s" data-delay=".7s">UKMC School of Health is bringing UK university degrees, foundation years and diplomas to a brand-new campus in Luton. Built for 2,000 students. And built for the kind of people the system usually overlooks.</p>
+								<a href="#" class="btn theme-btn page-scroll" data-animation="fadeInUp" data-duration="1.5s"
+									data-delay=".9s">Register your interest </a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="single-slider img-bg" style="background-image:url('{{ asset('front/assets/img/slider/slider-2.jpg') }}');">
+				<div class="container">
+					<div class="row">
+						<div class="col-xl-7 col-lg-8 col-md-8">
+							<div class="slider-content">
+								<h1 data-animation="fadeInDown" data-duration="1.5s" data-delay=".5s">Your route into healthcare starts here.
+								</h1>
+								<p data-animation="fadeInLeft" data-duration="1.5s" data-delay=".7s">UKMC School of Health is bringing UK university degrees, foundation years and diplomas to a brand-new campus in Luton. Built for 2,000 students. And built for the kind of people the system usually overlooks.</p>
+								<a href="#" class="btn theme-btn page-scroll" data-animation="fadeInUp" data-duration="1.5s"
+									data-delay=".9s">Register your interest</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</section>
+	<!-- ========================= slider-section end ========================= -->
+</div>
+
 <section class="we-do-section pt-150">
 		<div class="shape shape-1">
 			<img src="{{ asset('front/assets/img/shapes/shape-1.svg') }}" alt="">

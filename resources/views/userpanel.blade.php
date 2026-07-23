@@ -55,8 +55,8 @@
 							<div class="col-md-8">
 								<div class="header-top-left text-center text-md-left">
 									<ul>
-										<li><a href="#"><i class="lni lni-phone"></i> +463281626556</a></li>
-										<li><a href="#"><i class="lni lni-envelope"></i> hellomedic@gmail.com</a></li>
+										<li><a href="#"><i class="lni lni-phone"></i> +XXXXXXXXXXX</a></li>
+										<li><a href="#"><i class="lni lni-envelope"></i> demo@gmail.com</a></li>
 									</ul>
 								</div>
 							</div>
@@ -90,19 +90,19 @@
 									<div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
 										<ul id="nav" class="navbar-nav ml-auto">
 											<li class="nav-item active">
-												<a class="page-scroll active" href="index.html">Home</a>
+												<a class="page-scroll active" href={{ url('/') }}>Home</a>
 											</li>
 											<li class="nav-item">
-												<a class="page-scroll" href="#programs.html">Programs</a>
+												<a class="page-scroll" href="{{ url('/programs') }}">Programs</a>
 											</li>
 											<li class="nav-item">
-												<a class="page-scroll" href="#why-us.html">Why Us</a>
+												<a class="page-scroll" href="{{ url('/why-us') }}">Why Us</a>
 											</li>
 											<li class="nav-item">
-												<a class="page-scroll" href="#campus.html">Campus</a>
+												<a class="page-scroll" href="{{ url('/campus') }}">Campus</a>
 											</li>
 											<li class="nav-item">
-												<a class="page-scroll" href="#about.html">About</a>
+												<a class="page-scroll" href="{{ url('/about') }}">About</a>
 											</li>
 											<!-- <li class="nav-item">
 												<a class="page-scroll" href="#contact">Contact</a>
@@ -116,45 +116,6 @@
 				</div> <!-- navbar area -->
 		</div>
 
-		<div class="slider-wrapper">
-			<!-- ========================= slider-section start ========================= -->
-			<section class="slider-section">
-				<div class="slider-active slick-style">
-					<div class="single-slider img-bg" style="background-image:url('{{ asset('front/assets/img/slider/slider-1.jpg') }}');">
-						<div class="container">
-							<div class="row">
-								<div class="col-xl-7 col-lg-8 col-md-10">
-									<div class="slider-content">
-										<h1 data-animation="fadeInDown" data-duration="1.5s" data-delay=".5s">Your route into healthcare starts here.
-										</h1>
-										<p data-animation="fadeInLeft" data-duration="1.5s" data-delay=".7s">UKMC School of Health is bringing UK university degrees, foundation years and diplomas to a brand-new campus in Luton. Built for 2,000 students. And built for the kind of people the system usually overlooks.</p>
-										<a href="#" class="btn theme-btn page-scroll" data-animation="fadeInUp" data-duration="1.5s"
-											data-delay=".9s">Register your interest </a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="single-slider img-bg" style="background-image:url('{{ asset('front/assets/img/slider/slider-2.jpg') }}');">
-						<div class="container">
-							<div class="row">
-								<div class="col-xl-7 col-lg-8 col-md-8">
-									<div class="slider-content">
-										<h1 data-animation="fadeInDown" data-duration="1.5s" data-delay=".5s">Your route into healthcare starts here.
-										</h1>
-										<p data-animation="fadeInLeft" data-duration="1.5s" data-delay=".7s">UKMC School of Health is bringing UK university degrees, foundation years and diplomas to a brand-new campus in Luton. Built for 2,000 students. And built for the kind of people the system usually overlooks.</p>
-										<a href="#" class="btn theme-btn page-scroll" data-animation="fadeInUp" data-duration="1.5s"
-											data-delay=".9s">Register your interest</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-				</div>
-			</section>
-			<!-- ========================= slider-section end ========================= -->
-		</div>
 	</header>
 	<!-- ========================= header end ========================= -->
 
