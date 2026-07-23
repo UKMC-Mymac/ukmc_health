@@ -153,7 +153,7 @@
 							<ul class="footer-links">
 								<li><a href="#">Safeguarding</a></li>
 								<li><a href="#">Complaints</a></li>
-								<li><a href="#">Privacy</a></li>
+								<li><a href="{{ url('/privacy') }}">Privacy</a></li>
 								<li><a href="accessibility.html">Accessibility </a></li>
 								<li><a href="#">Equality & Diversity</a></li>
 								<li><a href="#">Contact</a></li>
