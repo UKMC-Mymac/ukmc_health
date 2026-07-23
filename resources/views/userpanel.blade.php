@@ -77,7 +77,7 @@
 						<div class="row">
 							<div class="col-lg-12">
 								<nav class="navbar navbar-expand-lg">
-									<a class="navbar-brand" href="index.html">
+									<a class="navbar-brand" href="{{ url('/') }}">
 										<img src="{{ asset('front/assets/img/logo/logo.svg') }}" alt="Logo">
 									</a>
 									<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -134,7 +134,8 @@
 						<div class="footer-widget mb-30">
 							<a href="index.html" class="logo"><img src="{{ asset('front/assets/img/logo/logo.svg') }}" alt=""></a>
 
-							<p>UKMC SCHOOL OF HEALTH</p>
+							<h5>UKMC SCHOOL OF HEALTH</5>
+							<p>Why "subject to validation"? UK degrees can only be awarded by recognised universities. Our degree and foundation year programmes are being developed for validation with an established UK university partner: a rigorous process that exists to protect students, and one we wouldn't want any other way. Our diploma programmes follow a separate route through regulated awarding organisations. Register your interest and we'll tell you the moment applications open.</p>
 
 							<!-- <div class="footer-social-links">
 								<ul>
