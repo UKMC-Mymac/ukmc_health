@@ -55,8 +55,8 @@
 							<div class="col-md-8">
 								<div class="header-top-left text-center text-md-left">
 									<ul>
-										<li><a href="#"><i class="lni lni-phone"></i> +XXXXXXXXXXX</a></li>
-										<li><a href="#"><i class="lni lni-envelope"></i> demo@gmail.com</a></li>
+										<li><a href="#"><i class="lni lni-phone"></i> +XXXXXXXXXXX1111</a></li>
+										<li><a href="#"><i class="lni lni-envelope"></i> demo@gmail.com1111</a></li>
 									</ul>
 								</div>
 							</div>
