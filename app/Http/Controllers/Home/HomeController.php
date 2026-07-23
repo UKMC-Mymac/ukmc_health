@@ -34,7 +34,32 @@ class HomeController extends Controller
 
     //if change the about page then change the route in web.php
     public function about(){
-        $data['page_title'] = 'About Us';
+        $data['page_title'] = 'UKMC | About Us';
         return view('about.about', $data);
+    }
+
+    public function privacy(){
+        $data['page_title'] = 'UKMC | Privacy';
+        return view('privacy.privacy', $data);
+    }
+
+    public function cookie_policy(){
+        $data['page_title'] = 'UKMC | Cookie Policy';
+        return view('cookie-policy.cookie-policy', $data);
+    }
+
+    public function safeguarding(){
+        $data['page_title'] = 'UKMC | Safeguarding';
+        return view('safeguarding.safeguarding', $data);
+    }
+
+    public function complaints(){
+        $data['page_title'] = 'UKMC | Complaints';
+        return view('complaints.complaints', $data);
+    }
+
+    public function equality_and_diversity(){
+        $data['page_title'] = 'UKMC | Equality & Diversity';
+        return view('equality-and-iversity.equality-and-iversity', $data);
     }
 }

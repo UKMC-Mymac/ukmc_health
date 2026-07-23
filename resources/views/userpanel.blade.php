@@ -151,12 +151,13 @@
 						<div class="footer-widget mb-30">
 							<h4>Quick Link</h4>
 							<ul class="footer-links">
-								<li><a href="#">Safeguarding</a></li>
-								<li><a href="#">Complaints</a></li>
+								<li><a href="{{ url('/safeguarding') }}">Safeguarding</a></li>
+								<li><a href="{{ url('/complaints') }}">Complaints</a></li>
 								<li><a href="{{ url('/privacy') }}">Privacy</a></li>
-								<li><a href="accessibility.html">Accessibility </a></li>
-								<li><a href="#">Equality & Diversity</a></li>
-								<li><a href="#">Contact</a></li>
+								<li><a href="{{ url('/cookie-policy') }}">Cookie Policy</a></li>
+								<li><a href="{{ url('/accessibility') }}">Accessibility </a></li>
+								<li><a href="{{ url('/equality-and-diversity') }}">Equality & Diversity</a></li>
+								<li><a href="{{ url('/contact') }}">Contact</a></li>
 							</ul>
 						</div>
 					</div>

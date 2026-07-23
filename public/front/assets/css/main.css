@@ -2315,3 +2315,7 @@ p {
 #p_banner .slider-content {
   padding: 30px 0 30px !important;
 }
+
+ul li{
+  color: #000 !important;
+}

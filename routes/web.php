@@ -11,6 +11,11 @@ Route::controller(HomeController::class)->group(function () {
     Route::get('why-us', 'why_us');
     Route::get('/campus', 'campus');
     Route::get('/about', 'about');
+    Route::get('/privacy', 'privacy');
+    Route::get('/cookie-policy', 'cookie_policy');
+    Route::get('/safeguarding', 'safeguarding');
+    Route::get('/complaints', 'complaints');
+    Route::get('/equality-and-diversity', 'equality_and_diversity');
 });
 
 Route::get('/clear', function () {
