@@ -62,7 +62,7 @@ We think that's a fixable problem. A foundation year or a diploma can take someo
 			<div class="row">
 				<div class="col-xl-12">
 					<div class="graph mb-60">
-						<img src="{{ asset('front/assets/img/we-do/graph-img.svg') }}" alt="">
+						<img src="{{ asset('front/assets/img/we-do/graph-img.png') }}" alt="">
 					</div>
 				</div>
 
@@ -276,9 +276,10 @@ We think that's a fixable problem. A foundation year or a diploma can take someo
 							<input type="text" name="email" id="email" placeholder="Enter Your Email">
 							<select name="subject-area" class="form-select form-select-lg" required>
 								<option value="">--Select Subject Area-- </option>
-								<option value="#"></option>
-								<option value="#"></option>
-								<option value="#"></option>
+								<option value="#">Medical Sciences BSc (Hons), with Foundation Year route</option>
+								<option value="#">Health Foundation Year: Nursing pathway</option>
+								<option value="#">Health Foundation Year: Allied Health pathway</option>
+								<option value="#">Health & Social Care Diplomas, including Residential Childcare</option>
 							</select>
 							<input type="text" name="earliest_start_year" id="earliest_start_year" placeholder="Enter Earliest Start Year">
 							<select name="subject-area" class="form-select form-select-lg" required>

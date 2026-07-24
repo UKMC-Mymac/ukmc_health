@@ -12,7 +12,8 @@
 	<!-- Place favicon.ico ') }} in the root directory -->
 
 	<!-- ========================= CSS here ========================= -->
-	<link rel="stylesheet" href="{{ asset('front/assets/css/bootstrap-5.0.5-alpha.min.css') }}">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	{{-- <link rel="stylesheet" href="{{ asset('front/assets/css/bootstrap-5.0.5-alpha.min.css') }}"> --}}
 	<link rel="stylesheet" href="{{ asset('front/assets/css/LineIcons.2.0.css') }}">
 	<link rel="stylesheet" href="{{ asset('front/assets/css/animate.css') }}">
 	<link rel="stylesheet" href="{{ asset('front/assets/css/tiny-slider.css') }}">
@@ -90,22 +91,35 @@
 									<div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
 										<ul id="nav" class="navbar-nav ml-auto">
 											<li class="nav-item active">
-												<a class="page-scroll active" href={{ url('/') }}>Home</a>
+												<a class="page-scroll active py-2" href={{ url('/') }}>Home</a>
+											</li>
+											{{-- <li class="nav-item dropdown">
+												<a class="nav-link dropdown-toggle" href="{{ url('/programs') }}" role="button" data-bs-toggle="dropdown">Programs</a>
+												<ul class="dropdown-menu">
+													<li><a class="dropdown-item" href="#">Medical Sciences</a></li>
+													<li><a class="dropdown-item" href="#">Nursing Foundation Year</a></li>
+													<li><a class="dropdown-item" href="#">Allied Health Foundation Year</a></li>
+													<li><a class="dropdown-item" href="#">Health & Social Care Diplomas</a></li>
+												</ul>
+											</li> --}}
+											<li class="nav-item">
+												<a class="page-scroll py-2" href="{{ url('/programs') }}">Programs</a>
 											</li>
 											<li class="nav-item">
-												<a class="page-scroll" href="{{ url('/programs') }}">Programs</a>
+												<a class="page-scroll py-2" href="{{ url('/why-us') }}">Why Us</a>
 											</li>
 											<li class="nav-item">
-												<a class="page-scroll" href="{{ url('/why-us') }}">Why Us</a>
+												<a class="page-scroll py-2" href="{{ url('/campus') }}">Campus</a>
 											</li>
 											<li class="nav-item">
-												<a class="page-scroll" href="{{ url('/campus') }}">Campus</a>
+												<a class="page-scroll py-2" href="{{ url('/about') }}">About</a>
 											</li>
 											<li class="nav-item">
-												<a class="page-scroll" href="{{ url('/about') }}">About</a>
-											</li>
-											<li class="nav-item">
-												<a class="page-scroll" href="{{ url('/contact') }}">Contact</a>
+												<a class="page-scroll py-2" href="{{ url('/contact') }}">Contact</a>
+											</li> 
+
+											<li class="nav-item cta_btn">
+												<a class="page-scroll py-2 px-2" href="{{ url('/register') }}">Register your interest (Primary CTA)</a>
 											</li> 
 										</ul>
 									</div> <!-- navbar collapse -->
@@ -132,7 +146,7 @@
 				<div class="row">
 					<div class="col-xl-4 col-lg-5 col-md-6">
 						<div class="footer-widget mb-30">
-							<a href="index.html" class="logo"><img src="{{ asset('front/assets/img/logo/ukmc.png') }}" alt=""></a>
+							<a href="{{ url('/') }}" class="logo"><img src="{{ asset('front/assets/img/logo/ukmc.png') }}" alt=""></a>
 
 							<h5>UKMC SCHOOL OF HEALTH</5>
 							<p>Why "subject to validation"? UK degrees can only be awarded by recognised universities. Our degree and foundation year programmes are being developed for validation with an established UK university partner: a rigorous process that exists to protect students, and one we wouldn't want any other way. Our diploma programmes follow a separate route through regulated awarding organisations. Register your interest and we'll tell you the moment applications open.</p>
@@ -149,7 +163,7 @@
 					</div>
 					<div class="col-xl-4 col-lg-5 col-md-6">
 						<div class="footer-widget mb-30">
-							<h4>Quick Link</h4>
+							<h4 class="text-white mb-2">Quick Link</h4>
 							<ul class="footer-links">
 								<li><a href="{{ url('/safeguarding') }}">Safeguarding</a></li>
 								<li><a href="{{ url('/complaints') }}">Complaints</a></li>
@@ -176,10 +190,9 @@
 					</div> -->
 					<div class="col-xl-4 col-lg-12 col-md-7">
 						<div class="footer-widget mb-30">
-							<h4>Medical Location</h4>
+							<h4 class="text-white mb-3">Location</h4>
 							<div class="map-canvas">
-								<iframe class="map" id="gmap_canvas"
-										src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9499.146811051325!2d-2.163914!3d53.472272!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bb3d79636a91b%3A0xbb7227ab1eb34b02!2sUK%20Management%20College%2C%20College%20House%20Campus!5e0!3m2!1sen!2sbd!4v1782726459423!5m2!1sen!2sbd" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+								<iframe class="map" id="gmap_canvas" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9499.146811051325!2d-2.163914!3d53.472272!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bb3d79636a91b%3A0xbb7227ab1eb34b02!2sUK%20Management%20College%2C%20College%20House%20Campus!5e0!3m2!1sen!2sbd!4v1782726459423!5m2!1sen!2sbd" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
 							</div>
 						</div>
 					</div>
@@ -199,7 +212,8 @@
 	</a>
 
 	<!-- ========================= JS here ========================= -->
-	<script src="{{ asset('front/assets/js/bootstrap.bundle-5.0.0.alpha-min.js') }}"></script>
+	{{-- <script src="{{ asset('front/assets/js/bootstrap.bundle-5.0.0.alpha-min.js') }}"></script> --}}
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 	<script src="{{ asset('front/assets/js/wow.min.js') }}"></script>
 	<script src="{{ asset('front/assets/js/tiny-slider.js') }}"></script>
 	<script src="{{ asset('front/assets/js/main.js') }}"></script>

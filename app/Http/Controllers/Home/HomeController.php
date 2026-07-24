@@ -37,9 +37,14 @@ class HomeController extends Controller
         return view('about.about', $data);
     }
 
-     public function contact(){
+    public function contact(){
         $data['page_title'] = 'UKMC | Contact';
         return view('contact.contact', $data);
+    }
+
+    public function register(){
+        $data['page_title'] = 'UKMC | Register';
+        return view('register.register', $data);
     }
 
     public function privacy(){
