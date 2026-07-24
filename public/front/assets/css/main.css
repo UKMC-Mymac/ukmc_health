@@ -163,7 +163,10 @@ p {
 .read-more {
   font-size: 18px;
   font-weight: 500;
-  color: #1E2355;
+  color: #fff;
+  background-color: #1E2355;
+  padding: 7px 15px;
+  border-radius: 7px;
   font-family: "Raleway", sans-serif;
 }
 
@@ -2317,7 +2320,7 @@ p {
 
 /* Page */
 #p_banner{
-  padding-top: 30px;
+  padding-top: 20px;
 }
 #p_banner .slider-content {
   padding: 30px 0 30px !important;

@@ -102,7 +102,7 @@
 						<div class="service-content">
 							<h4>Closing</h4>
 							<p>Want to be part of the start of this? Register your interest and you'll be first to hear as it takes shape.</p>
-							<a href="#" class="read-more text-danger">[ Register your interest ] <i class="lni lni-arrow-right"></i></a>
+							<a class="read-more" href="{{ url('/register') }}">Register your interest <i class="lni lni-arrow-right"></i></a>
 						</div>
 						<div class="service-overlay img-bg"></div>
 					</div>

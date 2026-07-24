@@ -12,7 +12,7 @@
 								<h1 data-animation="fadeInDown" data-duration="1.5s" data-delay=".5s">Your route into healthcare starts here.
 								</h1>
 								<p data-animation="fadeInLeft" data-duration="1.5s" data-delay=".7s">UKMC School of Health is bringing UK university degrees, foundation years and diplomas to a brand-new campus in Luton. Built for 2,000 students. And built for the kind of people the system usually overlooks.</p>
-								<a href="#" class="btn theme-btn page-scroll" data-animation="fadeInUp" data-duration="1.5s"
+								<a href="{{ url('/register') }}" class="btn theme-btn page-scroll" data-animation="fadeInUp" data-duration="1.5s"
 									data-delay=".9s">Register your interest </a>
 							</div>
 						</div>
@@ -27,7 +27,7 @@
 								<h1 data-animation="fadeInDown" data-duration="1.5s" data-delay=".5s">Your route into healthcare starts here.
 								</h1>
 								<p data-animation="fadeInLeft" data-duration="1.5s" data-delay=".7s">UKMC School of Health is bringing UK university degrees, foundation years and diplomas to a brand-new campus in Luton. Built for 2,000 students. And built for the kind of people the system usually overlooks.</p>
-								<a href="#" class="btn theme-btn page-scroll" data-animation="fadeInUp" data-duration="1.5s"
+								<a href="{{ url('/register') }}" class="btn theme-btn page-scroll" data-animation="fadeInUp" data-duration="1.5s"
 									data-delay=".9s">Register your interest</a>
 							</div>
 						</div>

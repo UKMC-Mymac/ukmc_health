@@ -91,7 +91,7 @@
 						<div class="service-content">
 							<h4>Come and see it</h4>
 							<p>The best way to know if somewhere's right for you is to stand in it. We'll be running open days as we approach our first intake, and the people on our interest list are first to get the invitations.</p>
-							<a href="#" class="read-more text-danger">[ Register your interest ] <i class="lni lni-arrow-right"></i></a>
+							<a class="read-more" href="{{ url('/register') }}">Register your interest <i class="lni lni-arrow-right"></i></a>
 						</div>
 						<div class="service-overlay img-bg"></div>
 					</div>

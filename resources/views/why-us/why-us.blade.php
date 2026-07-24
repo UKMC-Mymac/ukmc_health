@@ -111,7 +111,7 @@
 						<div class="service-content">
 							<h4>Closing band</h4>
 							<p><b>Sound like your kind of place?</b> Register your interest and you'll be first to hear when applications open.</p>
-                            <a href="#" class="read-more text-danger">[ Register your interest ] <i class="lni lni-arrow-right"></i></a>
+                            <a class="read-more" href="{{ url('/register') }}">Register your interest <i class="lni lni-arrow-right"></i></a>
 						</div>
 						<div class="service-overlay img-bg"></div>
 					</div>
