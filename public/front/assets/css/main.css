@@ -256,7 +256,7 @@ p {
 .scroll-top {
   width: 45px;
   height: 45px;
-  background: #1E2355;
+  background: #D93B3E;
   text-align: center;
   line-height: 45px;
   font-size: 20px;
@@ -2075,7 +2075,8 @@ p {
 }
 
 .subscribe-section .subscribe-wrapper .subscribe-from input,
-.subscribe-section .subscribe-wrapper .subscribe-from select 
+.subscribe-section .subscribe-wrapper .subscribe-from select,
+.subscribe-section .subscribe-wrapper .subscribe-from select option
 {
   width: 100%;
   max-width: 570px;
@@ -2226,6 +2227,9 @@ p {
 /*===========================
     footer css 
 ===========================*/
+.footer{
+  background-color:#1E2355
+}
 .footer .footer-widget-wrapper {
   margin-bottom: 30px;
 }

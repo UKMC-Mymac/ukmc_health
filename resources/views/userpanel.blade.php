@@ -54,7 +54,7 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-md-8">
-								<div class="header-top-left text-center text-md-left">
+								<div class="header-top-left text-md-left">
 									<ul>
 										<li><a href="#"><i class="lni lni-phone"></i> +XXXXXXXXXXX1111</a></li>
 										<li><a href="#"><i class="lni lni-envelope"></i> demo@gmail.com1111</a></li>
@@ -77,12 +77,12 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-lg-12">
+
 								<nav class="navbar navbar-expand-lg">
 									<a class="navbar-brand" href="{{ url('/') }}">
 										<img src="{{ asset('front/assets/img/logo/ukmc.png') }}" alt="Logo">
 									</a>
-									<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-										aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+									<button  class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 										<span class="toggler-icon"></span>
 										<span class="toggler-icon"></span>
 										<span class="toggler-icon"></span>
@@ -140,7 +140,7 @@
 
 
 	<!-- ========================= footer start ========================= -->
-	<footer class="footer pt-100 img-bg" style="background-image:url('{{ asset('front/assets/img/bg/footer-bg.jpg') }}');">
+	<footer class="footer pt-100 img-bg">
 		<div class="container">
 			<div class="footer-widget-wrapper">
 				<div class="row">
