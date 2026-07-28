@@ -111,7 +111,7 @@ An honest note: nursing degrees are approved by the Nursing and Midwifery Counci
 				<div class="col-xl-4 col-lg-4 col-md-6">
 					<div class="single-blog mb-30 wow fadeInUp" data-wow-delay=".6s">
 						<div class="blog-img">
-							<a href="{{ url('/register') }}"><img src="{{ asset('front/assets/img/blog/blog-3.png') }}" alt=""></a>
+							<a href="{{ url('/register') }}"><img src="{{ asset('front/assets/img/blog/clearing 1.jpg') }}" alt=""></a>
 						</div>
 						<div class="blog-content">
 							<h4><a href="{{ url('/register') }}">Health & Social Care Diplomas, including Residential Childcare</a></h4>
@@ -122,6 +122,69 @@ An honest note: nursing degrees are approved by the Nursing and Midwifery Counci
 						</div>
 					</div>
 				</div>
+
+				<div class="col-xl-4 col-lg-4 col-md-6">
+					<div class="single-blog mb-30 wow fadeInUp" data-wow-delay=".6s">
+						<div class="blog-img">
+							<a href="{{ url('/register') }}"><img src="{{ asset('front/assets/img/blog/31-Health-&-Social-care.jpg') }}" alt=""></a>
+						</div>
+						<div class="blog-content">
+							<h4><a href="{{ url('/register') }}">BSc (Hons) Health & Social Care with Foundation Year</a></h4>
+							<h6 class="mb-2">Awarding body: University of Wolverhampton</h6>
+							<p><i>BSc (Hons) Health & Social Care with Foundation Year program offers a solid foundation in health and social care, supporting you in building essential academic skills and sector knowledge, preparing you for further study and a rewarding career in health and social care.</i></p>
+							<p>BSc (Hons) Health & Social Care with Foundation Year develops essential knowledge in healthcare principles and professional practice while preparing for a rewarding career making a real difference in people's lives, and progresses through foundation study through to degree study.</p>
+							<h5>Course Overview</h5>
+							<p>At UKMC, we deliver the University of Wolverhampton’s BSc (Hons) Health and Social Care with Foundation Year in a warm, friendly and supportive environment. You’ll be working towards a respected University of Wolverhampton degree while benefiting from UKMC’s smaller class sizes, personalised approach and dedicated student support. Our teaching methods include activities, exercises, quizzes, and formative assessments to help you stay on track with learning outcomes and assessment expectations.
+
+From the very start of your foundation year, you’ll be taught by approachable lecturers who get to know you as an individual, not just a name on a register. Wherever possible, larger groups are taught in smaller classes, so you have more direct contact with your tutors and plenty of chances to ask questions and join in discussions. You won’t just be sitting and listening – you’ll learn through activities, case studies, quizzes, group work and regular check-ins to help you stay on track with your learning goals and assessments.
+
+You’ll receive one-to-one support with your assignments and assessments throughout the course. Module tutorials, workshops and “assignment unpacking” sessions make it clear what you need to do and how your work will be marked. Study skills classes, peer study groups and a mix of assessment types (such as essays, presentations and reflective tasks) recognise that everyone learns differently and help you build the academic skills you need for higher-level study.
+
+As a UKMC student on a University of Wolverhampton programme, you’ll have access to extensive library resources and a wide range of online learning materials, along with specialist study skills and academic support. If you have a specific learning need, we can help arrange additional support and reasonable adjustments so you can take part fully and confidently in your studies.
+
+Your wellbeing is just as important as your grades. UKMC offers a range of student support services, including one-to-one advice and guidance, mental health and wellbeing support, information about financial aid, and self-care resources to help you balance your studies with your personal life.
+
+Above all, UKMC is a welcoming place to learn. We are guided by values of respect, inclusion and collaboration in everything we do. You’ll be encouraged to share your ideas, take part in debate and reflect on real-world health and social care practice in a safe, supportive environment where your voice and lived experience are genuinely valued.</p>
+
+							<a class="read-more" href="{{ url('/register') }}">Register your interest <i class="lni lni-arrow-right"></i></a>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-xl-4 col-lg-4 col-md-6">
+					<div class="single-blog mb-30 wow fadeInUp" data-wow-delay=".6s">
+						<div class="blog-img">
+							<a href="{{ url('/register') }}"><img src="{{ asset('front/assets/img/blog/course1.svg') }}" alt=""></a>
+						</div>
+						<div class="blog-content">
+							<h4><a href="{{ url('/register') }}">BSc (Hons) Psychology with Foundation Year</a></h4>
+							<h6 class="mb-2">Awarding body: HSU University</h6>
+							<p><i>The BSc (Hons) Psychology with Foundation Year provides a comprehensive introduction to psychological theory, research, and application. The foundation year develops essential academic, scientific, and professional skills, preparing students for degree-level study. The course covers core areas of psychology including cognitive, biological, developmental, and social psychology, alongside research methods and applied skills. </i></p>
+							<p>The BSc (Hons) Psychology with Foundation Year provides a comprehensive introduction to psychological theory, research, and application. The foundation year develops essential academic, scientific, and professional skills, preparing students for degree-level study. The course covers core areas of psychology including cognitive, biological, developmental, and social psychology, alongside research methods and applied skills. Students gain knowledge of human behaviour, mental processes, and real-world applications of psychology. The programme supports progression into careers or further study in psychology and related fields, equipping graduates with analytical, research, and communication skills valued across multiple professional sectors. The degree is awarded by Health Sciences University. This course is not yet approved by the British Psychological Society (BPS).</p>
+							<p>The BSc (Hons) Psychology with Foundation Year is designed to provide students with a strong academic and practical understanding of psychology, beginning with a foundation year that builds essential study skills and subject knowledge. The course develops knowledge across key psychological domains, including biological, cognitive, social, and developmental psychology, alongside research methods and applied practice.
+
+Students will explore how psychological theory can be applied to real-world contexts such as health, education, and organisational settings. The course also focuses on developing critical thinking, research, and communication skills, preparing students for a range of career opportunities.
+
+Graduates may progress into careers in areas such as mental health support, human resources, education, research, and social services, or continue to postgraduate study in specialised areas of psychology.</p>
+							<a class="read-more" href="{{ url('/register') }}">Register your interest <i class="lni lni-arrow-right"></i></a>
+						</div>
+					</div>
+				</div>
+
+				{{-- <div class="col-xl-4 col-lg-4 col-md-6">
+					<div class="single-blog mb-30 wow fadeInUp" data-wow-delay=".6s">
+						<div class="blog-img">
+							<a href="{{ url('/register') }}"><img src="{{ asset('front/assets/img/blog/blog-3.png') }}" alt=""></a>
+						</div>
+						<div class="blog-content">
+							<h4><a href="{{ url('/register') }}"></a></h4>
+							<p><i></i></p>
+							<p></p>
+							<p></p>
+							<a class="read-more" href="{{ url('/register') }}">Register your interest <i class="lni lni-arrow-right"></i></a>
+						</div>
+					</div>
+				</div> --}}
 
 			</div>
 		</div>
