@@ -19,6 +19,7 @@ Route::controller(HomeController::class)->group(function () {
     Route::get('/equality-and-diversity', 'equality_and_diversity');
     Route::get('/contact', 'contact');
     Route::get('/register', 'register');
+    Route::post('/contact/submit', [HomeController::class, 'submitForm'])->name('contact.submit');
 });
 
 Route::get('/clear', function () {
@@ -33,5 +34,3 @@ Route::get('/clear', function () {
 Route::get('/migrate', function () {
     return Artisan::call('migrate', ['--force' => true]);
 });
-
-

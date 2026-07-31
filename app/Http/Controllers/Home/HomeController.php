@@ -3,79 +3,133 @@
 namespace App\Http\Controllers\Home;
 
 use App\Http\Controllers\Controller;
+use App\Mail\ContactMail;
 use Illuminate\Http\Request;
+use App\Models\Contact\Contact;
+use Illuminate\Support\Facades\Mail;
+
+
 
 class HomeController extends Controller
 {
-    public function index(){
+    public function index()
+    {
         $data['page_title'] = 'UKMC SCHOOL OF HEALTH';
         return view('home.index', $data);
     }
 
-    public function programs(){
+    public function programs()
+    {
         $data['page_title'] = 'UKMC | Programs';
         return view('programs.programs', $data);
     }
 
-    public function programs_detail(){
+    public function programs_detail()
+    {
         $data['page_title'] = 'UKMC | Medical Sciences BSc (Hons), with Foundation Year route';
         return view('programs.programs-detail', $data);
     }
 
-    public function why_us(){
+    public function why_us()
+    {
         $data['page_title'] = 'UKMC | Why us';
         return view('why-us.why-us', $data);
     }
-    
-    public function campus(){
+
+    public function campus()
+    {
         $data['page_title'] = 'UKMC | Campus';
         return view('campus.campus', $data);
     }
 
-    public function about(){
+    public function about()
+    {
         $data['page_title'] = 'UKMC | About Us';
         return view('about.about', $data);
     }
 
-    public function contact(){
+    public function contact()
+    {
         $data['page_title'] = 'UKMC | Contact';
         return view('contact.contact', $data);
     }
 
-    public function register(){
+    public function register()
+    {
         $data['page_title'] = 'UKMC | Register';
         return view('register.register', $data);
     }
 
-    public function privacy(){
+    public function privacy()
+    {
         $data['page_title'] = 'UKMC | Privacy';
         return view('privacy.privacy', $data);
     }
 
-    public function cookie_policy(){
+    public function cookie_policy()
+    {
         $data['page_title'] = 'UKMC | Cookie Policy';
         return view('cookie-policy.cookie-policy', $data);
     }
 
-    public function accessibility(){
+    public function accessibility()
+    {
         $data['page_title'] = 'UKMC | Accessibility';
         return view('accessibility.accessibility', $data);
     }
 
-    public function safeguarding(){
+    public function safeguarding()
+    {
         $data['page_title'] = 'UKMC | Safeguarding';
         return view('safeguarding.safeguarding', $data);
     }
 
-    public function complaints(){
+    public function complaints()
+    {
         $data['page_title'] = 'UKMC | Complaints';
         return view('complaints.complaints', $data);
     }
 
-    public function equality_and_diversity(){
+    public function equality_and_diversity()
+    {
         $data['page_title'] = 'UKMC | Equality & Diversity';
         return view('equality-and-iversity.equality-and-iversity', $data);
     }
 
-    
+    public function submitForm(Request $request)
+    {
+
+
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required|email',
+            'subject_area' => 'required',
+            'earliest_start_year' => 'required',
+            'currentsituation' => 'required',
+        ]);
+
+        $contact = new Contact();
+        $contact->name = $request->name;
+        $contact->email = $request->email;
+        $contact->subject_area = $request->subject_area;
+        $contact->earliest_start_year = $request->earliest_start_year;
+        $contact->currentsituation = $request->currentsituation;
+
+        $contact->save();
+        $details = [
+            'name' => $request->name,
+            'email' => $request->email,
+            'subject_area' => $request->subject_area,
+            'earliest_start_year' => $request->earliest_start_year,
+            'currentsituation' => $request->currentsituation,
+        ];
+        // Send email to admin
+        // try {
+        Mail::to('saidulislam0400@gmail.com')->send(new ContactMail($details));
+        dd('Email sent successfully');
+        // } catch (\Exception $e) {
+        //     return redirect()->back()->with('error', 'Failed to send email. Please try again later.');
+        // }
+        return redirect()->back()->with('success', 'Your message has been sent.');
+    }
 }

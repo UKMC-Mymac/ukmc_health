@@ -49,25 +49,36 @@
 						<p class="mb-35 text-white">Programmes open for application once they're validated, and the people on this list hear before anyone else: invitations to open days, and one-to-one application support.</p>
 					</div>
 					<div class="subscribe-wrapper">
-						<form action="#" class="subscribe-from">
-							<input type="text" name="name" id="name" placeholder="Enter Your Name">
-							<input type="text" name="email" id="email" placeholder="Enter Your Email">
-							<select name="subject-area" class="form-select form-select-lg" required>
+						<form action="{{ route('contact.submit') }}" method="POST" class="subscribe-from">
+							@csrf
+							<input type="text" name="name" id="name" placeholder="Enter Your Name" required>
+							@error('name')<div style="color:red; font-size:12px;">{{ $message }}</div>@enderror
+							
+							<input type="email" name="email" id="email" placeholder="Enter Your Email" required>
+							@error('email')<div style="color:red; font-size:12px;">{{ $message }}</div>@enderror
+							
+							<select name="subject_area" class="form-select form-select-lg" required>
 								<option value="">--Select Subject Area-- </option>
-								<option value="#">Medical Sciences BSc (Hons), with Foundation Year route</option>
-								<option value="#">Health Foundation Year: Nursing pathway</option>
-								<option value="#">Health Foundation Year: Allied Health pathway</option>
-								<option value="#">Health & Social Care Diplomas, including Residential Childcare</option>
+								<option value="Medical Sciences BSc (Hons), with Foundation Year route">Medical Sciences BSc (Hons), with Foundation Year route</option>
+								<option value="Health Foundation Year: Nursing pathway">Health Foundation Year: Nursing pathway</option>
+								<option value="Health Foundation Year: Allied Health pathway">Health Foundation Year: Allied Health pathway</option>
+								<option value="Health & Social Care Diplomas, including Residential Childcare">Health & Social Care Diplomas, including Residential Childcare</option>
 							</select>
-							<input type="text" name="earliest_start_year" id="earliest_start_year" placeholder="Enter Earliest Start Year">
-							<select name="subject-area" class="form-select form-select-lg" required>
+							@error('subject_area')<div style="color:red; font-size:12px;">{{ $message }}</div>@enderror
+							
+							<input type="text" name="earliest_start_year" id="earliest_start_year" placeholder="Enter Earliest Start Year" required>
+							@error('earliest_start_year')<div style="color:red; font-size:12px;">{{ $message }}</div>@enderror
+							
+							<select name="currentsituation" id="currentsituation" class="form-select form-select-lg" required>
 								<option value="">--Select Current Situation -- </option>
-								<option value="#">School leaver </option>
-								<option value="#">Working in health or care </option>
-								<option value="#">Career changer </option>
-								<option value="#">Returning to study </option>
-								<option value="#">other</option>
+								<option value="School leaver">School leaver</option>
+								<option value="Working in health or care">Working in health or care</option>
+								<option value="Career changer">Career changer</option>
+								<option value="Returning to study">Returning to study</option>
+								<option value="other">other</option>
 							</select>
+							@error('currentsituation')<div style="color:red; font-size:12px;">{{ $message }}</div>@enderror
+							
 							<button class="btn theme-btn bg-white text-body" type="submit">Submit</button>
 						</form>
 						<!-- <div class="support d-flex">
