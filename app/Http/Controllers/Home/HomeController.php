@@ -125,11 +125,9 @@ class HomeController extends Controller
         ];
         // Send email to admin
         // try {
-        Mail::to('saidulislam0400@gmail.com')->send(new ContactMail($details));
-        dd('Email sent successfully');
-        // } catch (\Exception $e) {
-        //     return redirect()->back()->with('error', 'Failed to send email. Please try again later.');
-        // }
+        Mail::to($contact->email)->send(new ContactMail($details));
+
+
         return redirect()->back()->with('success', 'Your message has been sent.');
     }
 }
