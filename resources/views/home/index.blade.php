@@ -1,5 +1,6 @@
 @extends('userpanel')
 @section('content')
+
 <div class="slider-wrapper">
 	<!-- ========================= slider-section start ========================= -->
 	<section class="slider-section">

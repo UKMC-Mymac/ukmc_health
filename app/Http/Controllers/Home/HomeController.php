@@ -7,6 +7,7 @@ use App\Mail\ContactMail;
 use Illuminate\Http\Request;
 use App\Models\Contact\Contact;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Session;
 
 
 
@@ -125,11 +126,13 @@ class HomeController extends Controller
         ];
         // Send email to admin
         // try {
-        Mail::to('saidulislam0400@gmail.com')->send(new ContactMail($details));
-        dd('Email sent successfully');
+        Mail::to($contact->email)->send(new ContactMail($details));
+        
+        // dd('Email sent successfully');
         // } catch (\Exception $e) {
         //     return redirect()->back()->with('error', 'Failed to send email. Please try again later.');
         // }
-        return redirect()->back()->with('success', 'Your message has been sent.');
+        return redirect()->back()->with('success', 'Your email has been sent successfully!');
+        
     }
 }
