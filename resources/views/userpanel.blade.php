@@ -19,6 +19,8 @@
 	<link rel="stylesheet" href="{{ asset('front/assets/css/tiny-slider.css') }}">
 	<link rel="stylesheet" href="{{ asset('front/assets/css/main.css') }}">
 
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/izitoast@1.4.0/dist/css/iziToast.min.css">
+
 
 </head>
 
@@ -217,6 +219,26 @@
 	<script src="{{ asset('front/assets/js/wow.min.js') }}"></script>
 	<script src="{{ asset('front/assets/js/tiny-slider.js') }}"></script>
 	<script src="{{ asset('front/assets/js/main.js') }}"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/izitoast@1.4.0/dist/js/iziToast.min.js"></script>
+	<script>
+    @if(session('success'))
+        iziToast.success({
+            title: 'Success',
+            message: "{{ session('success') }}",
+            position: 'topRight'
+        });
+    @endif
+
+    @if(session('error'))
+        iziToast.error({
+            title: 'Error',
+            message: "{{ session('error') }}",
+            position: 'topRight'
+        });
+    @endif
+
+</script>
 </body>
 
 </html>
