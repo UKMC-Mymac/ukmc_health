@@ -92,8 +92,8 @@
 				
 									<div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
 										<ul id="nav" class="navbar-nav ml-auto">
-											<li class="nav-item active">
-												<a class="page-scroll active py-2" href={{ url('/') }}>Home</a>
+											<li class="nav-item ">
+												<a class="  py-2  {{ request()->is('/') ? 'active' : '' }}  " href={{ url('/') }}>Home</a>
 											</li>
 											{{-- <li class="nav-item dropdown">
 												<a class="nav-link dropdown-toggle" href="{{ url('/programs') }}" role="button" data-bs-toggle="dropdown">Programs</a>
@@ -105,23 +105,23 @@
 												</ul>
 											</li> --}}
 											<li class="nav-item">
-												<a class="page-scroll py-2" href="{{ url('/programs') }}">Programs</a>
+												<a class=" py-2 {{ request()->is('programs') ? 'active' : '' }}  " href="{{ url('/programs') }}">Programs</a>
 											</li>
 											<li class="nav-item">
-												<a class="page-scroll py-2" href="{{ url('/why-us') }}">Why Us</a>
+												<a class=" py-2 {{ request()->is('why-us') ? 'active' : '' }}  " href="{{ url('/why-us') }}">Why Us</a>
 											</li>
 											<li class="nav-item">
-												<a class="page-scroll py-2" href="{{ url('/campus') }}">Campus</a>
+												<a class=" py-2 {{ request()->is('campus') ? 'active' : '' }}  " href="{{ url('/campus') }}">Campus</a>
 											</li>
 											<li class="nav-item">
-												<a class="page-scroll py-2" href="{{ url('/about') }}">About</a>
+												<a class=" py-2 {{ request()->is('about') ? 'active' : '' }}  " href="{{ url('/about') }}">About</a>
 											</li>
 											<li class="nav-item">
-												<a class="page-scroll py-2" href="{{ url('/contact') }}">Contact</a>
+												<a class=" py-2 {{ request()->is('contact') ? 'active' : '' }}  " href="{{ url('/contact') }}">Contact</a>
 											</li> 
 
 											<li class="nav-item cta_btn">
-												<a class="page-scroll py-2 px-2" href="{{ url('/register') }}">Register your interest (Primary CTA)</a>
+												<a class=" py-2 px-2  {{ request()->is('register') ? 'active' : '' }}   " href="{{ url('/register') }}">Register your interest (Primary CTA)</a>
 											</li> 
 										</ul>
 									</div> <!-- navbar collapse -->
