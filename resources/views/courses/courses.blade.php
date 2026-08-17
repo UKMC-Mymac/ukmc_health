@@ -130,6 +130,63 @@
 <a href="#register" class="btn btn-ukmc-primary pulse">Register your interest</a>
 </div>
 </div>
+
+<!-- REGISTER YOUR INTEREST FORM -->
+<section class="section" id="register" style="background:var(--ukmc-blue-deep)">
+<div class="container-xxl">
+<div class="row justify-content-center text-center mb-5 reveal">
+<div class="col-lg-7 text-white">
+<h2 class="text-white mb-2">Register your interest</h2>
+<p class="mb-0" style="opacity:.85">Be first through the door. Register now and you'll hear before anyone else — invitations to open days, and one-to-one application support.</p>
+</div>
+</div>
+<div class="row justify-content-center">
+<div class="col-lg-7 reveal reveal-delay-1">
+<form action="{{ route('contact.submit') }}" method="POST" class="form-ukmc">
+@csrf
+<div class="row">
+<div class="col-md-6">
+<label for="fname">Full name</label>
+<input type="text" name="name" class="form-control" id="fname" placeholder="Jordan Smith">
+</div>
+<div class="col-md-6">
+<label for="femail">Email address</label>
+<input type="email" name="email" class="form-control" id="femail" placeholder="you@example.com">
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
+<label for="fsubject">Course</label>
+<select name="subject_area" class="form-select" id="fsubject">
+<option>BSc (Hons) Health and Social Care</option>
+<option>Psychology</option>
+</select>
+</div>
+<div class="col-md-6">
+<label for="fyear">Earliest start year</label>
+<input type="text" name="earliest_start_year" class="form-control" id="fyear" placeholder="2027">
+</div>
+</div>
+<label for="fsituation">Current situation</label>
+<select name="currentsituation" class="form-select mb-3" id="fsituation">
+<option value="School leaver">School leaver</option>
+<option value="Career changer">Career changer</option>
+<option value="Returning to education">Returning to education</option>
+<option value="Working in a care role">Working in a care role</option>
+<option value="Other">Other</option>
+</select>
+<div class="form-check mb-4">
+<input class="form-check-input" type="checkbox" id="fconsent">
+<label class="form-check-label" for="fconsent" style="font-family:'Roboto';font-weight:400;color:#fff;opacity:.85">
+              I agree to be contacted by UKMC Health about my registration, in line with the <a href="#" style="color:var(--ukmc-light-blue);text-decoration:underline">Privacy Policy</a>.
+</label>
+</div>
+<button type="submit" class="btn btn-ukmc-primary w-100">Submit</button>
+</form>
+</div>
+</div>
+</div>
+</section>
  
 
 @endsection
