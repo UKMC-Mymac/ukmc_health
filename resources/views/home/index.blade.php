@@ -1,7 +1,347 @@
 @extends('userpanel')
 @section('content')
+<style>
+:root{
+  --ukmc-blue:#152071; --ukmc-blue-deep:#0E1650; --ukmc-red:#D81516;
+  --ukmc-red-deep:#B01113; --ukmc-light-blue:#A8DADC; --ukmc-off-white:#EDF2F4;
+  --ukmc-yellow:#F8C000; --ukmc-ink:#1E1F3A; --ukmc-gray:#5C6178; --ukmc-line:#D9DEE8;
+  --ukmc-radius:16px; --ukmc-radius-btn:10px;
+  --ukmc-shadow:0 6px 24px rgba(21,32,113,.08);
+  --ukmc-shadow-hover:0 16px 40px rgba(21,32,113,.16);
+}
+*{box-sizing:border-box}
+body{font-family:'Roboto',sans-serif;color:var(--ukmc-ink);font-size:17px;line-height:1.65;background:#fff;overflow-x:hidden}
+h1,h2,h3,h4,.btn{font-family:'Poppins',sans-serif}
+h1,h2,h3,h4{color:var(--ukmc-blue);font-weight:600;line-height:1.15}
+a{color:var(--ukmc-blue);text-decoration:none} a:hover{color:var(--ukmc-red-deep)}
+.eyebrow{font-family:'Poppins';font-weight:600;font-size:14px;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--ukmc-red-deep);display:block;margin-bottom:12px}
+.section{padding:104px 0}
+.section-alt{background:var(--ukmc-off-white)}
+:focus-visible{outline:3px solid var(--ukmc-yellow);outline-offset:2px}
+@media (max-width:768px){.section{padding:64px 0} body{font-size:16px}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+ 
+/* ---------- GLOW & MOTION ---------- */
+@keyframes floatGlow{
+  0%,100%{transform:translate(0,0) scale(1)}
+  50%{transform:translate(-16px,-24px) scale(1.06)}
+}
+@keyframes ctaGlow{
+  0%,100%{box-shadow:0 0 0 0 rgba(216,21,22,.0), 0 8px 24px rgba(216,21,22,.35)}
+  50%{box-shadow:0 0 34px 8px rgba(216,21,22,.45), 0 8px 24px rgba(216,21,22,.35)}
+}
+@keyframes shimmer{
+  0%{background-position:0% 50%}
+  100%{background-position:200% 50%}
+}
+.glow-blob{position:absolute;border-radius:50%;filter:blur(60px);pointer-events:none;
+  animation:floatGlow 9s ease-in-out infinite}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in-view{opacity:1;transform:translateY(0)}
+.reveal-delay-1.in-view{transition-delay:.1s}
+.reveal-delay-2.in-view{transition-delay:.2s}
+.reveal-delay-3.in-view{transition-delay:.3s}
+ 
+/* ---------- BUTTONS ---------- */
+.btn-ukmc-primary{background:var(--ukmc-red);color:#fff;font-family:'Poppins';font-weight:600;
+  padding:15px 30px;border-radius:var(--ukmc-radius-btn);border:none;position:relative;
+  box-shadow:0 8px 24px rgba(216,21,22,.35);transition:transform .2s ease,box-shadow .2s ease}
+.btn-ukmc-primary:hover{background:var(--ukmc-red-deep);color:#fff;transform:translateY(-3px);
+  box-shadow:0 14px 34px rgba(216,21,22,.5)}
+.btn-ukmc-primary.pulse{animation:ctaGlow 2.6s ease-in-out infinite}
+.btn-ukmc-outline{background:transparent;border:2px solid #fff;color:#fff;font-family:'Poppins';
+  font-weight:600;padding:13px 28px;border-radius:var(--ukmc-radius-btn);transition:all .2s ease}
+.btn-ukmc-outline:hover{background:#fff;color:var(--ukmc-blue);transform:translateY(-3px);
+  box-shadow:0 12px 28px rgba(255,255,255,.25)}
+ 
+/* ---------- HERO ---------- */
+.hero{background:radial-gradient(120% 140% at 20% 0%, #1C2A8C 0%, var(--ukmc-blue) 45%, var(--ukmc-blue-deep) 100%);
+  position:relative;overflow:hidden;padding:120px 0 128px}
+.hero .glow-blob.g1{width:420px;height:420px;background:var(--ukmc-yellow);opacity:.28;top:-140px;right:-100px}
+.hero .glow-blob.g2{width:300px;height:300px;background:var(--ukmc-light-blue);opacity:.25;bottom:-100px;left:10%;
+  animation-delay:2s}
+.hero-highlight{
+  background:linear-gradient(90deg, var(--ukmc-yellow), #fff, var(--ukmc-yellow));
+  background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;
+  animation:shimmer 4s linear infinite;
+}
+.hero h1{color:#fff}
+.hero-img-frame{
+  border-radius:999px 999px 24px 24px;
+  background:linear-gradient(160deg, var(--ukmc-light-blue), var(--ukmc-yellow) 130%);
+  aspect-ratio:3/4; width:100%; max-width:420px;
+  display:flex;align-items:center;justify-content:center;color:rgba(21,32,113,.6);
+  font-family:'Poppins';font-weight:600;font-size:15px;text-align:center;padding:24px;
+  box-shadow:0 30px 60px rgba(0,0,0,.35), 0 0 60px rgba(248,192,0,.25);
+  position:relative;z-index:2;
+}
+ 
+/* ---------- TRUST STRIP ---------- */
+.partner-pill{border:1.5px solid var(--ukmc-line);border-radius:var(--ukmc-radius);background:#fff;
+  padding:20px 36px;font-family:'Poppins';font-weight:600;color:var(--ukmc-blue);
+  box-shadow:var(--ukmc-shadow);min-width:260px;text-align:center;transition:all .25s ease}
+.partner-pill:hover{box-shadow:0 0 0 3px rgba(248,192,0,.35), var(--ukmc-shadow-hover);transform:translateY(-4px)}
+.partner-pill span{display:block;font-family:'Roboto';font-weight:400;color:var(--ukmc-gray);
+  font-size:13px;margin-top:4px}
+ 
+/* ---------- CARDS ---------- */
+.card-ukmc{background:#fff;border:1px solid var(--ukmc-line);border-radius:var(--ukmc-radius);
+  box-shadow:var(--ukmc-shadow);transition:transform .25s ease,box-shadow .25s ease;position:relative}
+.card-ukmc:hover{transform:translateY(-6px);box-shadow:0 0 0 1px rgba(248,192,0,.4), var(--ukmc-shadow-hover)}
+.badge-ukmc{background:var(--ukmc-yellow);color:var(--ukmc-blue);border-radius:999px;
+  font-family:'Poppins';font-weight:600;font-size:13px;padding:6px 14px;display:inline-block}
+.prog-icon{width:58px;height:58px;border-radius:50%;background:var(--ukmc-light-blue);
+  display:flex;align-items:center;justify-content:center;margin-bottom:16px;font-size:27px;
+  box-shadow:0 0 0 6px rgba(168,218,220,.3)}
+ 
+/* ---------- STATEMENT BAND ---------- */
+.band-blue{background:radial-gradient(120% 160% at 50% 0%, #1C2A8C 0%, var(--ukmc-blue) 60%, var(--ukmc-blue-deep) 100%);
+  color:#fff;position:relative;overflow:hidden}
+.band-blue h2{color:#fff}
+.band-blue .glow-blob{width:360px;height:360px;background:var(--ukmc-red);opacity:.25;top:-120px;left:50%;
+  transform:translateX(-50%)}
+ 
+/* ---------- FORM ---------- */
+.form-ukmc label{font-family:'Poppins';font-weight:600;font-size:14px;color:#fff;margin-bottom:6px;display:block}
+.form-ukmc .form-control, .form-ukmc .form-select{border-radius:10px;border:1px solid var(--ukmc-line);
+  padding:13px 14px;margin-bottom:18px;transition:box-shadow .2s ease,border-color .2s ease}
+.form-ukmc .form-control:focus, .form-ukmc .form-select:focus{
+  border-color:var(--ukmc-yellow);box-shadow:0 0 0 4px rgba(248,192,0,.25)}
+</style>
 
-<div class="slider-wrapper">
+<!-- HERO -->
+<header class="hero">
+<div class="glow-blob g1"></div>
+<div class="glow-blob g2"></div>
+<div class="container-xxl position-relative" style="z-index:2">
+<div class="row align-items-center g-5">
+<div class="col-lg-7 text-white reveal in-view">
+<span class="eyebrow" style="color:var(--ukmc-yellow)">UKMC Health</span>
+<h1 class="mb-4" style="font-size:54px">Your route into healthcare starts <span class="hero-highlight">here.</span></h1>
+<p class="mb-4" style="font-size:19px;opacity:.92;max-width:56ch">
+          UKMC Health brings university-partnered degrees in Health and Social Care and Psychology to career
+          changers, healthcare assistants and returning learners — the people the traditional route often
+          overlooks.
+</p>
+<div class="d-flex gap-3 flex-wrap">
+<a href="#register" class="btn btn-ukmc-primary pulse">Register your interest</a>
+<a href="#courses" class="btn btn-ukmc-outline">Explore our courses</a>
+</div>
+</div>
+<div class="col-lg-5 d-flex justify-content-center position-relative reveal reveal-delay-1 in-view">
+<div class="hero-img-frame">
+          IMAGE NEEDED<br>Real, unposed photo of a student or clinician
+</div>
+</div>
+</div>
+</div>
+</header>
+ 
+<!-- TRUST STRIP -->
+<div class="section-alt py-5">
+<div class="container-xxl text-center reveal">
+<span class="eyebrow mb-4 d-block">In partnership with</span>
+<div class="d-flex justify-content-center gap-4 flex-wrap">
+<div class="partner-pill">
+        University of Wolverhampton
+<span>University partner</span>
+</div>
+<div class="partner-pill">
+        Health Sciences University
+<span>University partner</span>
+</div>
+</div>
+</div>
+</div>
+ 
+<!-- THE WHY -->
+<section class="section">
+<div class="container-xxl">
+<div class="row justify-content-center text-center mb-5 reveal">
+<div class="col-lg-8">
+<span class="eyebrow">Why we exist</span>
+<h2 class="mb-4">Healthcare is short of people. We think that's fixable.</h2>
+</div>
+</div>
+<div class="row g-4">
+<div class="col-md-4 reveal">
+<div class="card-ukmc p-4 h-100">
+<p class="mb-0" style="color:var(--ukmc-gray)">Tens of thousands of nursing, care and health roles sit unfilled, with demand still climbing.</p>
+</div>
+</div>
+<div class="col-md-4 reveal reveal-delay-1">
+<div class="card-ukmc p-4 h-100">
+<p class="mb-0" style="color:var(--ukmc-gray)">Career changers, healthcare assistants and parents returning to work are ready for the next step — just without the traditional route in.</p>
+</div>
+</div>
+<div class="col-md-4 reveal reveal-delay-2">
+<div class="card-ukmc p-4 h-100">
+<p class="mb-0" style="color:var(--ukmc-gray)">A university-partnered degree can take someone from "no qualifications" to a career that genuinely means something. That's what we're building.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+ 
+<!-- COURSES -->
+<section class="section section-alt" id="courses">
+<div class="container-xxl">
+<div class="row justify-content-center text-center mb-5 reveal">
+<div class="col-lg-7">
+<span class="eyebrow">Our courses</span>
+<h2>Two routes into a healthcare career</h2>
+</div>
+</div>
+<div class="row g-4 justify-content-center">
+<div class="col-md-6 col-lg-5 reveal">
+<div class="card-ukmc p-4 h-100">
+<div class="prog-icon">🩺</div>
+<h3 class="h5">BSc (Hons) Health and Social Care</h3>
+<p style="color:var(--ukmc-gray);font-size:15px">
+            A practical, career-focused degree for people already working in — or heading into — health and
+            social care roles. Flexible study designed around working adults' lives.
+</p>
+<a href="#" class="fw-semibold" style="color:var(--ukmc-red)">View course details →</a>
+</div>
+</div>
+<div class="col-md-6 col-lg-5 reveal reveal-delay-1">
+<div class="card-ukmc p-4 h-100">
+<div class="prog-icon">🧠</div>
+<h3 class="h5">Psychology</h3>
+<p style="color:var(--ukmc-gray);font-size:15px">
+            Build the knowledge and skills that open doors across healthcare, education, HR and beyond —
+            taught by a team focused on your progression, not just your grades.
+</p>
+<a href="#" class="fw-semibold" style="color:var(--ukmc-red)">View course details →</a>
+</div>
+</div>
+</div>
+<div class="text-center mt-5 reveal">
+<a href="#" class="btn btn-ukmc-primary">See full course details</a>
+</div>
+</div>
+</section>
+ 
+<!-- ESTABLISHED PROVIDER -->
+<section class="section">
+<div class="container-xxl">
+<div class="row justify-content-center text-center mb-5 reveal">
+<div class="col-lg-8">
+<span class="eyebrow">Part of an established provider</span>
+<h2>We're new. What's behind us isn't.</h2>
+<p style="color:var(--ukmc-gray)">
+          UKMC Health is UKMC's move into healthcare education, delivered in partnership with the
+          University of Wolverhampton and Health Sciences University.
+</p>
+</div>
+</div>
+<div class="row g-4">
+<div class="col-md-6 reveal">
+<div class="card-ukmc p-4 h-100">
+<h3 class="h5">Learning close to real healthcare</h3>
+<p style="color:var(--ukmc-gray)">Healthcare can't be learned from slides alone. Students get taster days and observation in real clinical settings — a feel for the work before they commit their future to it.</p>
+</div>
+</div>
+<div class="col-md-6 reveal reveal-delay-1">
+<div class="card-ukmc p-4 h-100">
+<h3 class="h5">Built around your life</h3>
+<p style="color:var(--ukmc-gray)">Weekday and evening study options, dedicated student support, and a course structure built for people balancing work, family and study — not just school leavers.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+ 
+<!-- STATEMENT BAND -->
+<div class="band-blue section text-center">
+<div class="glow-blob"></div>
+<div class="container-xxl position-relative reveal" style="z-index:2">
+<h2 class="mb-3">Built for the people healthcare <span class="hero-highlight">needs.</span></h2>
+<p class="mb-4" style="opacity:.9;max-width:56ch;margin-inline:auto">Register now to be first through the door — invitations to open days, and one-to-one application support.</p>
+<a href="#register" class="btn btn-ukmc-primary pulse">Register your interest</a>
+</div>
+</div>
+ 
+<!-- REGISTER YOUR INTEREST FORM -->
+<section class="section" id="register" style="background:var(--ukmc-blue-deep)">
+<div class="container-xxl">
+<div class="row justify-content-center text-center mb-5 reveal">
+<div class="col-lg-7 text-white">
+<h2 class="text-white mb-2">Register your interest</h2>
+<p class="mb-0" style="opacity:.85">Be first through the door. Register now and you'll hear before anyone else — invitations to open days, and one-to-one application support.</p>
+</div>
+</div>
+<div class="row justify-content-center">
+<div class="col-lg-7 reveal reveal-delay-1">
+<form action="{{ route('contact.submit') }}" method="POST" class="form-ukmc">
+@csrf
+<div class="row">
+<div class="col-md-6">
+<label for="fname">Full name</label>
+<input type="text" name="name" class="form-control" id="fname" placeholder="Jordan Smith">
+</div>
+<div class="col-md-6">
+<label for="femail">Email address</label>
+<input type="email" name="email" class="form-control" id="femail" placeholder="you@example.com">
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
+<label for="fsubject">Course</label>
+<select name="subject_area" class="form-select" id="fsubject">
+<option>BSc (Hons) Health and Social Care</option>
+<option>Psychology</option>
+</select>
+</div>
+<div class="col-md-6">
+<label for="fyear">Earliest start year</label>
+<input type="text" name="earliest_start_year" class="form-control" id="fyear" placeholder="2027">
+</div>
+</div>
+<label for="fsituation">Current situation</label>
+<select name="currentsituation" class="form-select mb-3" id="fsituation">
+<option value="School leaver">School leaver</option>
+<option value="Career changer">Career changer</option>
+<option value="Returning to education">Returning to education</option>
+<option value="Working in a care role">Working in a care role</option>
+<option value="Other">Other</option>
+</select>
+<div class="form-check mb-4">
+<input class="form-check-input" type="checkbox" id="fconsent">
+<label class="form-check-label" for="fconsent" style="font-family:'Roboto';font-weight:400;color:#fff;opacity:.85">
+              I agree to be contacted by UKMC Health about my registration, in line with the <a href="#" style="color:var(--ukmc-light-blue);text-decoration:underline">Privacy Policy</a>.
+</label>
+</div>
+<button type="submit" class="btn btn-ukmc-primary w-100">Submit</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+ 
+<!-- PARTNER LINE -->
+<section class="section-alt py-5">
+<div class="container-xxl text-center reveal">
+<span class="eyebrow">Partner &amp; investor line</span>
+<h2 class="h4 mb-2">Universities, employers and investors — we'd welcome a conversation.</h2>
+<p><a href="mailto:partnerships@ukmcsh.co.uk" style="font-weight:600">partnerships@ukmcsh.co.uk</a></p>
+</div>
+</section>
+ 
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+{{-- ======================= --}}
+{{-- <div class="slider-wrapper">
 	<!-- ========================= slider-section start ========================= -->
 	<section class="slider-section">
 		<div class="slider-active slick-style">
@@ -39,9 +379,9 @@
 		</div>
 	</section>
 	<!-- ========================= slider-section end ========================= -->
-</div>
+</div> --}}
 
-<section class="we-do-section pt-150">
+{{-- <section class="we-do-section pt-150">
 		<div class="shape shape-1">
 			<img src="{{ asset('front/assets/img/shapes/shape-1.svg') }}" alt="">
 		</div>
@@ -179,11 +519,11 @@ We think that's a fixable problem. A foundation year or a diploma can take someo
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> --}}
 	<!--========================= we-do-section start========================= -->
 
 	<!-- ========================= about-section start ========================= -->
-	<section id="about" class="about-section pt-120">
+	{{-- <section id="about" class="about-section pt-120">
 		<div class="shape shape-2">
 			<img src="{{ asset('front/assets/img/shapes/shape-2.svg') }}" alt="">
 		</div>
@@ -209,26 +549,15 @@ We think that's a fixable problem. A foundation year or a diploma can take someo
 		<!-- <div class="about-img text-center">
 			<img src="{{ asset('front/assets/img/about/about-img.png ') }}" alt="">
 		</div> -->
-	</section>
+	</section> --}}
 	<!-- ========================= about-section end ========================= -->
 
 	<!--========================= service-section start ========================= -->
-	<section id="services" class="service-section pt-50">
+	{{-- <section id="services" class="service-section pt-50">
 		<div class="shape shape-3">
 			<img src="{{ asset('front/assets/img/shapes/shape-3.svg') }}" alt="">
 		</div>
 		<div class="container">
-			<!-- <div class="row">
-				<div class="col-xl-8 mx-auto">
-					<div class="section-title text-center mb-55">
-						<span class="wow fadeInDown" data-wow-delay=".2s">Services</span>
-						<h2 class="mb-15 wow fadeInUp" data-wow-delay=".4s">Our Healthcare Services</h2>
-						<p class="wow fadeInUp" data-wow-delay=".6s">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-							dinonumy
-							<br class="d-none d-lg-block"> eirmod tempor invidunt ut labore et dolore magn.</p>
-					</div>
-				</div>
-			</div> -->
 			<div class="row">
 				<div class="col-lg-6 col-md-6">
 					<div class="service-item mb-30">
@@ -236,7 +565,6 @@ We think that's a fixable problem. A foundation year or a diploma can take someo
 						<div class="service-content">
 							<h4>Learning close to real healthcare</h4>
 							<p>Healthcare can't be learned from slides alone. Through our affiliated healthcare group, our students will have opportunities to step inside real clinical settings: taster days, observation, a feel for the work before they commit their future to it.</p>
-							<!-- <a href="#" class="read-more">Read More <i class="lni lni-arrow-right"></i></a> -->
 						</div>
 						<div class="service-overlay img-bg"></div>
 					</div>
@@ -246,7 +574,6 @@ We think that's a fixable problem. A foundation year or a diploma can take someo
 						<div class="service-content">
 							<h4>The campus</h4>
 							<p>A brand-new, purpose-fitted campus in Luton, <span class="text-danger">[<b>PLACEHOLDER:</b> minutes from X station]</span>, built for 2,000 students.</p>
-							<!-- <a href="#" class="read-more">Read More <i class="lni lni-arrow-right"></i></a> -->
 						</div>
 						<div class="service-overlay img-bg"></div>
 					</div>
@@ -254,11 +581,11 @@ We think that's a fixable problem. A foundation year or a diploma can take someo
 
 			</div>
 		</div>
-	</section>
+	</section> --}}
 	<!--========================= service-section end ========================= -->
 
 	<!-- ========================= Form start ========================= -->
-	<section class="subscribe-section pt-100 pb-100 theme-bg" style="background-color: #1E2355;">
+	{{-- <section class="subscribe-section pt-100 pb-100 theme-bg" style="background-color: #1E2355;">
 		<div class="container">
 			<div class="row">
 				<div class="col-xl-12">
@@ -294,34 +621,16 @@ We think that's a fixable problem. A foundation year or a diploma can take someo
 							</select>
 							<button class="btn theme-btn bg-white text-body" type="submit">Submit</button>
 						</form>
-						<!-- <div class="support d-flex">
-							<div class="support-icon">
-								<svg xmlns="http://www.w3.org/2000/svg" width="57.473" height="56.533" viewBox="0 0 57.473 56.533">
-									<g id="noun_customer_service_2786300" data-name="noun_customer service_2786300"
-										transform="translate(-11.49 -12.11)">
-										<path id="Path_94" data-name="Path 94"
-											d="M65.1,36.746a3.769,3.769,0,0,0-.485.052v-.209a3.858,3.858,0,0,0-2.746-3.664,21.6,21.6,0,0,0-43.166-.037,3.858,3.858,0,0,0-2.873,3.732v.209a3.769,3.769,0,0,0-.485-.052,3.866,3.866,0,0,0-3.858,3.858v7.515a3.866,3.866,0,0,0,3.858,3.858,3.732,3.732,0,0,0,.485-.052v.209a3.858,3.858,0,1,0,7.709,0V36.589a3.732,3.732,0,0,0-.037-.4V33.671a16.792,16.792,0,0,1,33.584,0v1.851a3.784,3.784,0,0,0-.164,1.037V52.172a3.829,3.829,0,0,0,.082.784c-1.1,2.463-4.254,8.426-9.56,10.075a4.023,4.023,0,1,0,.246,2.4c5.15-1.4,8.821-6.1,10.836-10.127a3.821,3.821,0,0,0,2.239.746,3.866,3.866,0,0,0,3.858-3.858v-.231a3.73,3.73,0,0,0,.485.052,3.866,3.866,0,0,0,3.851-3.858V40.6A3.866,3.866,0,0,0,65.1,36.746Z"
-											fill="#00adb5" />
-										<path id="Path_95" data-name="Path 95"
-											d="M35.595,41.324a5.97,5.97,0,0,1,1.59-4.478,4.858,4.858,0,0,1,3.6-1.358,4.627,4.627,0,0,1,3.485,1.53A5.052,5.052,0,0,1,45.715,40.6a9.866,9.866,0,0,1-.94,4.321,29.853,29.853,0,0,1-2.4,3.732q-.507.746-1.493,2.239l-.6.873q-.545.828-.813,1.306a1.1,1.1,0,0,0-.134.284h6.127v3.06H35.55V53.564a6.716,6.716,0,0,1,.694-1.134q.306-.485.7-1.067l.806-1.179q.746-.978,2.239-3.12a20.9,20.9,0,0,0,2.142-3.642,6.859,6.859,0,0,0,.582-2.746,2.463,2.463,0,0,0-.53-1.6,1.843,1.843,0,0,0-1.493-.694,1.918,1.918,0,0,0-1.843,1.493,3.4,3.4,0,0,0-.179,1.216v.746H35.595Z"
-											transform="translate(-6.104 -5.93)" fill="#00adb5" />
-										<path id="Path_96" data-name="Path 96"
-											d="M49.37,48.893l5.5-13.083h3.12V48.893h2v3.142h-2v4.478H54.87V52.035h-5.5Zm5.5,0V42.46L52.3,48.893Z"
-											transform="translate(-9.61 -6.012)" fill="#00adb5" />
-									</g>
-								</svg>
-							</div>
-						</div> -->
 
 					</div>
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> --}}
 	<!-- ========================= Form end ========================= -->
 
 	<!-- ========================= Partner start ========================= -->
-	<section id="testimonial" class="team-section pt-150 pb-150">
+	{{-- <section id="testimonial" class="team-section pt-150 pb-150">
 		<div class="shape shape-5">
 			<img src="{{ asset('front/assets/img/shapes/shape-2.svg') }}" alt="">
 		</div>
@@ -335,11 +644,10 @@ We think that's a fixable problem. A foundation year or a diploma can take someo
 						
 						<h2 class="mb-15 wow fadeInUp" data-wow-delay=".2s">Partner & investor line</h2>
 						<span class="wow fadeInDown" data-wow-delay=".4s">Universities, employers and investors: we'd welcome a conversation. [ partnerships@ukmc... ]</span>
-						<!-- <a href="" rel="nofollow" class="btn theme-btn"></a> -->
 					</div>
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> --}}
 	<!-- ========================= Partner end ========================= -->
     @endsection

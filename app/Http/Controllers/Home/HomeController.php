@@ -19,16 +19,16 @@ class HomeController extends Controller
         return view('home.index', $data);
     }
 
-    public function programs()
+    public function courses()
     {
-        $data['page_title'] = 'UKMC | Programs';
-        return view('programs.programs', $data);
+        $data['page_title'] = 'UKMC | Courses';
+        return view('courses.courses', $data);
     }
 
     public function programs_detail()
     {
         $data['page_title'] = 'UKMC | Medical Sciences BSc (Hons), with Foundation Year route';
-        return view('programs.programs-detail', $data);
+        return view('courses.programs-detail', $data);
     }
 
     public function why_us()

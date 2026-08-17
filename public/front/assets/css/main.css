@@ -1355,7 +1355,7 @@ p {
 }
 
 /*===== NAVBAR =====*/
-.navbar-area {
+/* .navbar-area {
   -webkit-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s;
   background: #fff;
@@ -1536,7 +1536,7 @@ p {
   top: 110%;
   left: 0;
   opacity: 0;
-  /* visibility: hidden; */
+
   -webkit-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s;
 }
@@ -1621,7 +1621,7 @@ p {
   transform: rotate(-45deg);
   position: relative;
   top: -5px;
-}
+} */
 
 /*===========================
     Slider CSS
@@ -2335,8 +2335,7 @@ ul li{
 }
 
 .cta_btn{
-  border-radius: 7px;
-  background-color: #1E2355;;
+  background-color: #D81516;
 }
 
 .cta_btn a{

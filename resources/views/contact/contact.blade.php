@@ -33,14 +33,11 @@
 			</div>
 			<div class="row">
                 <div class="col-xl-6">
-                    <h4 class="text-white">Contact</h4>
-                    <p class="text-white text-bold"><i class="lni lni-envelope"></i> demo@gmail.com1111 </p>
-                    <p class="text-white text-bold"><i class="lni lni-phone"></i>  +XXXXXXXXXXX1111</p>
+                    <h3 class="text-white mb-3">Contact</h3>
+                    <p class="text-white text-bold mb-3"><span aria-hidden="true">✉️</span> recruitment@ukmc.ac.uk</p>
+                    <p class="text-white text-bold mb-3"><span aria-hidden="true">📞</span> +44 (0)161 478 0015</p>
 
-                    <div class="map-canvas mt-4">
-                        <iframe class="map" id="gmap_canvas"
-                                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9499.146811051325!2d-2.163914!3d53.472272!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bb3d79636a91b%3A0xbb7227ab1eb34b02!2sUK%20Management%20College%2C%20College%20House%20Campus!5e0!3m2!1sen!2sbd!4v1782726459423!5m2!1sen!2sbd" width="400" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-                    </div>
+                    <p class="text-white text-bold mb-3"><span aria-hidden="true">📍</span> College House Campus, Stanley St/Catherine St, Openshaw, Manchester, M11 1LE</p>
                 </div>
 				<div class="col-xl-6">
                     <div class="section-title text-center">

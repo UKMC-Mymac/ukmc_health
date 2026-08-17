@@ -1,0 +1,132 @@
+
+:root{
+  --ukmc-blue:#152071; --ukmc-blue-deep:#0E1650; --ukmc-red:#D81516;
+  --ukmc-red-deep:#B01113; --ukmc-light-blue:#A8DADC; --ukmc-off-white:#EDF2F4;
+  --ukmc-yellow:#F8C000; --ukmc-ink:#1E1F3A; --ukmc-gray:#5C6178; --ukmc-line:#D9DEE8;
+  --ukmc-radius:16px; --ukmc-radius-btn:10px;
+  --ukmc-shadow:0 6px 24px rgba(21,32,113,.08);
+  --ukmc-shadow-hover:0 18px 44px rgba(21,32,113,.16);
+}
+*{box-sizing:border-box}
+body{font-family:'Roboto',sans-serif;color:var(--ukmc-ink);font-size:17px;line-height:1.65;background:#fff;overflow-x:hidden}
+h1,h2,h3,h4,.btn{font-family:'Poppins',sans-serif}
+h1,h2,h3,h4{color:var(--ukmc-blue);font-weight:600;line-height:1.15}
+a{color:var(--ukmc-blue);text-decoration:none} a:hover{color:var(--ukmc-red-deep)}
+.eyebrow{font-family:'Poppins';font-weight:600;font-size:14px;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--ukmc-red-deep);display:block;margin-bottom:12px}
+.section{padding:96px 0}
+.section-alt{background:var(--ukmc-off-white)}
+:focus-visible{outline:3px solid var(--ukmc-yellow);outline-offset:2px}
+@media (max-width:768px){.section{padding:56px 0} body{font-size:16px}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+ 
+/* Motion */
+@keyframes floatGlow{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-16px,-24px) scale(1.06)}}
+@keyframes ctaGlow{0%,100%{box-shadow:0 0 0 0 rgba(216,21,22,0),0 8px 24px rgba(216,21,22,.35)}
+  50%{box-shadow:0 0 34px 8px rgba(216,21,22,.45),0 8px 24px rgba(216,21,22,.35)}}
+@keyframes shimmer{0%{background-position:0% 50%}100%{background-position:200% 50%}}
+.glow-blob{position:absolute;border-radius:50%;filter:blur(60px);pointer-events:none;animation:floatGlow 9s ease-in-out infinite}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in-view{opacity:1;transform:translateY(0)}
+.reveal-delay-1.in-view{transition-delay:.12s}
+.hero-highlight{background:linear-gradient(90deg,var(--ukmc-yellow),#fff,var(--ukmc-yellow));
+  background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;
+  animation:shimmer 4s linear infinite}
+ 
+/* Buttons */
+.btn-ukmc-primary{background:var(--ukmc-red);color:#fff;font-family:'Poppins';font-weight:600;
+  padding:14px 28px;border-radius:var(--ukmc-radius-btn);border:none;
+  box-shadow:0 8px 24px rgba(216,21,22,.3);transition:transform .2s ease,box-shadow .2s ease}
+.btn-ukmc-primary:hover{background:var(--ukmc-red-deep);color:#fff;transform:translateY(-3px);
+  box-shadow:0 14px 34px rgba(216,21,22,.45)}
+.btn-ukmc-primary.pulse{animation:ctaGlow 2.6s ease-in-out infinite}
+.btn-ukmc-outline{background:transparent;border:2px solid #fff;color:#fff;font-family:'Poppins';
+  font-weight:600;padding:13px 26px;border-radius:var(--ukmc-radius-btn);transition:all .2s ease}
+.btn-ukmc-outline:hover{background:#fff;color:var(--ukmc-blue);transform:translateY(-3px)}
+.btn-ukmc-outline-blue{border:2px solid var(--ukmc-blue);color:var(--ukmc-blue);font-family:'Poppins';
+  font-weight:600;padding:12px 26px;border-radius:var(--ukmc-radius-btn);background:transparent;transition:all .2s ease}
+.btn-ukmc-outline-blue:hover{background:var(--ukmc-blue);color:#fff;transform:translateY(-3px)}
+ 
+/* Top bar / nav (matches homepage) */
+.topbar{background:var(--ukmc-blue-deep);color:#fff;font-size:14px;padding:8px 0}
+.topbar a{color:#fff;opacity:.9}
+.topbar a:hover{opacity:1;color:var(--ukmc-light-blue)}
+.topbar .social-icon{width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.12);
+  display:inline-flex;align-items:center;justify-content:center;margin-left:8px}
+.navbar-ukmc{background:#fff;box-shadow:0 2px 12px rgba(21,32,113,.06);position:sticky;top:0;z-index:1030;transition:box-shadow .2s ease}
+.navbar-ukmc .nav-link{font-family:'Poppins';font-weight:500;color:var(--ukmc-ink);margin:0 12px}
+.navbar-ukmc .nav-link.active{color:var(--ukmc-red)}
+.logo-mark{width:100px;height:auto; background:var(--ukmc-blue);
+  display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.logo-mark svg{width:24px;height:24px}
+.logo-wordmark{font-family:'Poppins';font-weight:700;font-size:19px;line-height:1.1;color:var(--ukmc-blue)}
+.logo-wordmark span{display:block;font-family:'Poppins';font-weight:500;font-size:11px;
+  letter-spacing:.08em;text-transform:uppercase;color:var(--ukmc-red)}
+.offcanvas-ukmc{background:var(--ukmc-blue);width:300px}
+.offcanvas-ukmc .nav-link{color:#fff;font-family:'Poppins';font-weight:500;font-size:17px;
+  padding:14px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+.offcanvas-ukmc .nav-link.active{color:var(--ukmc-yellow)}
+.offcanvas-ukmc .btn-close{filter:invert(1)}
+ 
+/* Page hero */
+.page-hero{background:radial-gradient(120% 160% at 20% 0%,#1C2A8C 0%,var(--ukmc-blue) 45%,var(--ukmc-blue-deep) 100%);
+  position:relative;overflow:hidden;padding:80px 0 96px;color:#fff}
+.page-hero .glow-blob.g2{width:280px;height:280px;background:var(--ukmc-light-blue);opacity:.2;bottom:-120px;left:6%;animation-delay:2s}
+.breadcrumb-ukmc a{color:rgba(255,255,255,.7);font-size:14px}
+.breadcrumb-ukmc a:hover{color:var(--ukmc-yellow)}
+.breadcrumb-ukmc span{color:rgba(255,255,255,.4);margin:0 8px}
+ 
+/* Course feature card */
+.course-feature{background:#fff;border:1px solid var(--ukmc-line);border-radius:24px;
+  box-shadow:var(--ukmc-shadow);overflow:hidden;transition:box-shadow .3s ease,transform .3s ease}
+.course-feature:hover{box-shadow:0 0 0 1px rgba(248,192,0,.4),var(--ukmc-shadow-hover);transform:translateY(-4px)}
+.course-img-frame{
+  background:linear-gradient(150deg,var(--ukmc-light-blue),var(--ukmc-yellow) 140%);
+  min-height:280px;display:flex;align-items:center;justify-content:center;text-align:center;
+  color:rgba(21,32,113,.55);font-family:'Poppins';font-weight:600;font-size:14px;padding:24px;
+  position:relative;overflow:hidden;
+}
+.badge-ukmc{background:var(--ukmc-yellow);color:var(--ukmc-blue);border-radius:999px;
+  font-family:'Poppins';font-weight:600;font-size:12.5px;padding:6px 14px;display:inline-block;
+  position:absolute;top:20px;left:20px;box-shadow:0 4px 14px rgba(0,0,0,.15)}
+.awarding-line{display:flex;align-items:center;gap:8px;font-family:'Poppins';font-weight:600;
+  font-size:14px;color:var(--ukmc-blue);margin-bottom:14px}
+.awarding-line .dot{width:8px;height:8px;border-radius:50%;background:var(--ukmc-red)}
+ 
+/* Key facts panel */
+.keyfacts{background:var(--ukmc-off-white);border-radius:16px;padding:24px}
+.keyfacts dt{font-family:'Poppins';font-weight:600;font-size:12.5px;letter-spacing:.05em;
+  text-transform:uppercase;color:var(--ukmc-gray);margin-bottom:2px}
+.keyfacts dd{font-family:'Roboto';font-size:15px;color:var(--ukmc-ink);margin-bottom:16px}
+.keyfacts dd:last-child{margin-bottom:0}
+ 
+/* Compliance note */
+.compliance-note{background:#FFF7E0;border:1px solid var(--ukmc-yellow);border-radius:12px;
+  padding:14px 18px;font-size:14px;color:var(--ukmc-ink);display:flex;gap:10px;align-items:flex-start}
+.compliance-note .icon{flex-shrink:0;font-size:18px}
+ 
+/* Statement band */
+.band-blue{background:radial-gradient(120% 180% at 50% 0%,#1C2A8C 0%,var(--ukmc-blue) 60%,var(--ukmc-blue-deep) 100%);
+  color:#fff;position:relative;overflow:hidden}
+.band-blue h2{color:#fff}
+ 
+ 
+/* Footer */
+footer{background:var(--ukmc-blue);color:#fff}
+footer a{color:#fff;opacity:.85;font-size:15px}
+footer a:hover{opacity:1;color:var(--ukmc-light-blue)}
+footer h4{color:#fff;font-size:15px;margin-bottom:20px;font-family:'Poppins';font-weight:600;
+  letter-spacing:.04em;text-transform:uppercase;opacity:.85}
+footer li{margin-bottom:12px}
+.footer-bottom{background:var(--ukmc-blue-deep);font-size:13px;padding:18px 0}
+.footer-bottom a{opacity:.7;font-size:13px;margin-left:20px}
+.footer-social{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.1);
+  display:inline-flex;align-items:center;justify-content:center;margin-right:10px;transition:background .2s ease}
+.footer-social:hover{background:var(--ukmc-red)}
+.footer-contact-item{display:flex;gap:10px;align-items:flex-start;margin-bottom:14px;font-size:15px;opacity:.9}
+.accreditation-strip{background:var(--ukmc-blue-deep);border-top:1px solid rgba(255,255,255,.1);
+  border-bottom:1px solid rgba(255,255,255,.1);padding:22px 0}
+.footer-logo{display:flex;align-items:center;gap:10px;margin-bottom:18px}
+.footer-logo .logo-mark{background:#fff}
+.footer-logo .logo-wordmark{color:#fff}
+.footer-logo .logo-wordmark span{color:var(--ukmc-yellow)}

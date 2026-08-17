@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Artisan;
 
 Route::controller(HomeController::class)->group(function () {
     Route::get('/', 'index');
-    Route::get('programs', 'programs');
+    Route::get('courses', 'courses');
     Route::get('/programs/programs-detail', 'programs_detail');
     Route::get('why-us', 'why_us');
     Route::get('/campus', 'campus');
