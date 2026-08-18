@@ -21,79 +21,85 @@ class HomeController extends Controller
 
     public function courses()
     {
-        $data['page_title'] = 'UKMC | Courses';
+        $data['page_title'] = 'UKMCSH | Courses';
         return view('courses.courses', $data);
     }
 
-    public function programs_detail()
+    public function bsc_hons_psychology_with_foundation_year()
     {
-        $data['page_title'] = 'UKMC | Medical Sciences BSc (Hons), with Foundation Year route';
-        return view('courses.programs-detail', $data);
+        $data['page_title'] = 'UKMCSH | BSc (Hons) Psychology with Foundation Year';
+        return view('courses.bsc-hons-psychology-with-foundation-year', $data);
+    }
+
+    public function bsc_hons_health_and_social_care_with_foundation_year()
+    {
+        $data['page_title'] = 'UKMCSH | BSc (Hons) Health & Social Care with Foundation Year';
+        return view('courses.bsc-hons-health-and-social-care-with-foundation-year', $data);
     }
 
     public function why_us()
     {
-        $data['page_title'] = 'UKMC | Why us';
+        $data['page_title'] = 'UKMCSH | Why us';
         return view('why-us.why-us', $data);
     }
 
     public function campus()
     {
-        $data['page_title'] = 'UKMC | Campus';
+        $data['page_title'] = 'UKMCSH | Campus';
         return view('campus.campus', $data);
     }
 
     public function about()
     {
-        $data['page_title'] = 'UKMC | About Us';
+        $data['page_title'] = 'UKMCSH | About Us';
         return view('about.about', $data);
     }
 
     public function contact()
     {
-        $data['page_title'] = 'UKMC | Contact';
+        $data['page_title'] = 'UKMCSH | Contact';
         return view('contact.contact', $data);
     }
 
     public function register()
     {
-        $data['page_title'] = 'UKMC | Register';
+        $data['page_title'] = 'UKMCSH | Register';
         return view('register.register', $data);
     }
 
     public function privacy()
     {
-        $data['page_title'] = 'UKMC | Privacy';
+        $data['page_title'] = 'UKMCSH | Privacy';
         return view('privacy.privacy', $data);
     }
 
     public function cookie_policy()
     {
-        $data['page_title'] = 'UKMC | Cookie Policy';
+        $data['page_title'] = 'UKMCSH | Cookie Policy';
         return view('cookie-policy.cookie-policy', $data);
     }
 
     public function accessibility()
     {
-        $data['page_title'] = 'UKMC | Accessibility';
+        $data['page_title'] = 'UKMCSH | Accessibility';
         return view('accessibility.accessibility', $data);
     }
 
     public function safeguarding()
     {
-        $data['page_title'] = 'UKMC | Safeguarding';
+        $data['page_title'] = 'UKMCSH | Safeguarding';
         return view('safeguarding.safeguarding', $data);
     }
 
     public function complaints()
     {
-        $data['page_title'] = 'UKMC | Complaints';
+        $data['page_title'] = 'UKMCSH | Complaints';
         return view('complaints.complaints', $data);
     }
 
     public function equality_and_diversity()
     {
-        $data['page_title'] = 'UKMC | Equality & Diversity';
+        $data['page_title'] = 'UKMCSH | Equality & Diversity';
         return view('equality-and-iversity.equality-and-iversity', $data);
     }
 

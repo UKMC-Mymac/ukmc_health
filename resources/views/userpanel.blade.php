@@ -74,7 +74,7 @@
 	<!-- NAV -->
 <nav class="navbar navbar-expand-lg navbar-ukmc py-3" id="mainNav">
 <div class="container-xxl">
-<a class="navbar-brand d-flex align-items-center gap-2" href="#">
+<a class="navbar-brand d-flex align-items-center gap-2" href="{{ url('/') }}">
 <span class="logo-mark">
 	<img src="{{ asset('front/assets/img/logo/ukmc.png') }}" alt="UKMC School of Health">
 </span>
@@ -93,7 +93,7 @@
 <li class="nav-item"><a class="nav-link {{ request()->is('about') ? 'active' : '' }}" href="{{ url('/about') }}">About</a></li>
 <li class="nav-item"><a class="nav-link" href="{{ url('/contact') }}">Contact</a></li>
 </ul>
-<a href="#register" class="btn btn-ukmc-primary">Register your interest</a>
+<a href="{{ url('register') }}" class="btn btn-ukmc-primary">Register your interest</a>
 </div>
 </div>
 </nav>
@@ -113,7 +113,7 @@
 <li class="nav-item"><a class="nav-link {{ request()->is('about') ? 'active' : '' }}" href="{{ url('/about') }}">About</a></li>
 <li class="nav-item"><a class="nav-link" href="{{ url('/contact') }}">Contact</a></li>
 </ul>
-<a href="#register" class="btn btn-ukmc-primary w-100 mt-4">Register your interest</a>
+<a href="{{ url('register') }}" class="btn btn-ukmc-primary w-100 mt-4">Register your interest</a>
 </div>
 </div>
 	{{-- =============== --}}

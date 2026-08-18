@@ -53,7 +53,7 @@
 </div>
 </div>
 <div class="d-flex gap-3 flex-wrap mt-3">
-<a href="https://ukmc.ac.uk/course-details/bsc-hons-health-social-care-with-foundation-year" class="btn btn-ukmc-primary">View full course details</a>
+<a href="{{ url('/courses/bsc-hons-health-and-social-care-with-foundation-year') }}" class="btn btn-ukmc-primary">View full course details</a>
 <a href="#register" class="btn btn-ukmc-outline-blue">Register your interest</a>
 </div>
 </div>
@@ -112,7 +112,7 @@
 </div>
 </div>
 <div class="d-flex gap-3 flex-wrap mt-3">
-<a href="https://ukmc.ac.uk/course-details/bsc-hons-psychology-with-foundation-year" class="btn btn-ukmc-primary">View full course details</a>
+<a href="{{ url('/courses/bsc-hons-psychology-with-foundation-year') }}" class="btn btn-ukmc-primary">View full course details</a>
 <a href="#register" class="btn btn-ukmc-outline-blue">Register your interest</a>
 </div>
 </div>

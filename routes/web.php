@@ -7,7 +7,8 @@ use Illuminate\Support\Facades\Artisan;
 Route::controller(HomeController::class)->group(function () {
     Route::get('/', 'index');
     Route::get('courses', 'courses');
-    Route::get('/programs/programs-detail', 'programs_detail');
+    Route::get('/courses/bsc-hons-psychology-with-foundation-year', 'bsc_hons_psychology_with_foundation_year');
+    Route::get('/courses/bsc-hons-health-and-social-care-with-foundation-year', 'bsc_hons_health_and_social_care_with_foundation_year');
     Route::get('why-us', 'why_us');
     Route::get('/campus', 'campus');
     Route::get('/about', 'about');

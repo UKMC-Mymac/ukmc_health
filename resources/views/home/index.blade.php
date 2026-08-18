@@ -202,7 +202,7 @@ a{color:var(--ukmc-blue);text-decoration:none} a:hover{color:var(--ukmc-red-deep
             A practical, career-focused degree for people already working in — or heading into — health and
             social care roles. Flexible study designed around working adults' lives.
 </p>
-<a href="https://ukmc.ac.uk/course-details/bsc-hons-health-social-care-with-foundation-year" class="fw-semibold" style="color:var(--ukmc-red)">View course details →</a>
+<a href="{{ url('/courses/bsc-hons-health-and-social-care-with-foundation-year') }}" class="fw-semibold" style="color:var(--ukmc-red)">View course details →</a>
 </div>
 </div>
 <div class="col-md-6 col-lg-5 reveal reveal-delay-1">
@@ -213,7 +213,7 @@ a{color:var(--ukmc-blue);text-decoration:none} a:hover{color:var(--ukmc-red-deep
             Build the knowledge and skills that open doors across healthcare, education, HR and beyond —
             taught by a team focused on your progression, not just your grades.
 </p>
-<a href="https://ukmc.ac.uk/course-details/bsc-hons-psychology-with-foundation-year" class="fw-semibold" style="color:var(--ukmc-red)">View course details →</a>
+<a href="{{ url('/courses/bsc-hons-psychology-with-foundation-year') }}" class="fw-semibold" style="color:var(--ukmc-red)">View course details →</a>
 </div>
 </div>
 </div>
