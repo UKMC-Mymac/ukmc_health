@@ -10,8 +10,8 @@
 <div class="col-lg-5">
 <div class="course-img-frame h-100">
 <span class="badge-ukmc">Foundation Year</span>
-	{{-- <img src="{{ asset('front/assets/img/blog/31-Health-&-Social-care.jpg') }}" alt="BSc (Hons) Health and Social Care with Foundation Year"> --}}
-            IMAGE NEEDED<br>Real, unposed photo of a Health & Social Care student
+	<img src="{{ asset('front/assets/img/course/BSc (Hons) Health and Social Care.jpg') }}" alt="BSc (Hons) Health and Social Care with Foundation Year">
+            {{-- IMAGE NEEDED<br>Real, unposed photo of a Health & Social Care student --}}
 </div>
 </div>
 <div class="col-lg-7 p-4 p-lg-5">
@@ -65,8 +65,9 @@
 <div class="row g-0 flex-lg-row-reverse">
 <div class="col-lg-5">
 <div class="course-img-frame h-100">
-<span class="badge-ukmc">Foundation Year</span>
-            IMAGE NEEDED<br>Real, unposed photo of a Psychology student
+    <span class="badge-ukmc">Foundation Year</span>
+    <img src="{{ asset('front/assets/img/course/bsc-hons-psychology-with-foundation-year.jpg') }}" alt="BSc (Hons) Psychology with Foundation Year">
+            {{-- IMAGE NEEDED<br>Real, unposed photo of a Psychology student --}}
 </div>
 </div>
 <div class="col-lg-7 p-4 p-lg-5">

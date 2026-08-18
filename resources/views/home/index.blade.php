@@ -67,7 +67,7 @@ a{color:var(--ukmc-blue);text-decoration:none} a:hover{color:var(--ukmc-red-deep
   animation:shimmer 4s linear infinite;
 }
 .hero h1{color:#fff}
-.hero-img-frame{
+/* .hero-img-frame{
   border-radius:999px 999px 24px 24px;
   background:linear-gradient(160deg, var(--ukmc-light-blue), var(--ukmc-yellow) 130%);
   aspect-ratio:3/4; width:100%; max-width:420px;
@@ -75,7 +75,7 @@ a{color:var(--ukmc-blue);text-decoration:none} a:hover{color:var(--ukmc-red-deep
   font-family:'Poppins';font-weight:600;font-size:15px;text-align:center;padding:24px;
   box-shadow:0 30px 60px rgba(0,0,0,.35), 0 0 60px rgba(248,192,0,.25);
   position:relative;z-index:2;
-}
+} */
  
 /* ---------- TRUST STRIP ---------- */
 .partner-pill{border:1.5px solid var(--ukmc-line);border-radius:var(--ukmc-radius);background:#fff;
@@ -131,7 +131,7 @@ a{color:var(--ukmc-blue);text-decoration:none} a:hover{color:var(--ukmc-red-deep
 </div>
 <div class="col-lg-5 d-flex justify-content-center position-relative reveal reveal-delay-1 in-view">
 <div class="hero-img-frame">
-          IMAGE NEEDED<br>Real, unposed photo of a student or clinician
+    <img src="{{ asset('front/assets/img/home/std.jpg') }}" alt="">
 </div>
 </div>
 </div>
