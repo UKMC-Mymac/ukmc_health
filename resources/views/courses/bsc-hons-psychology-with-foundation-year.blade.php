@@ -131,8 +131,12 @@ a{color:var(--ukmc-blue);text-decoration:none} a:hover{color:var(--ukmc-red-deep
       </div>
     </div>
     <div class="hero-collage mt-4 reveal in-view">
-      <div class="hero-img-main">IMAGE NEEDED — real photo of Psychology students in a learning setting</div>
-      <div class="hero-img-sub">IMAGE NEEDED — course intro video thumbnail</div>
+      <div class="hero-img-main">
+        <img src="{{ asset('front/assets/img/course/bsc-hons-psychology-with-foundation-year-banner.jpg') }}" alt="BSc (Hons) Psychology with Foundation Year">
+      </div>
+      <div class="hero-img-sub">
+        <img src="{{ asset('front/assets/img/course/bsc-hons-psychology-with-foundation-year course.jpg') }}" alt="BSc (Hons) Psychology with Foundation Year">
+      </div>
     </div>
   </div>
 </header>

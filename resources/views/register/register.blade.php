@@ -75,8 +75,69 @@ a{color:var(--ukmc-blue);text-decoration:none} a:hover{color:var(--ukmc-red-deep
 </header>
 </div>
 
+
+<!-- REGISTER YOUR INTEREST FORM -->
+<section class="section" id="register" style="background:var(--ukmc-blue-deep)">
+<div class="container-xxl">
+<div class="row justify-content-center text-center mb-5 reveal">
+<div class="col-lg-7 text-white">
+<h2 class="text-white mb-2">Register your interest</h2>
+<p class="mb-0" style="opacity:.85">Be first through the door. Register now and you'll hear before anyone else — invitations to open days, and one-to-one application support.</p>
+</div>
+</div>
+<div class="row justify-content-center">
+<div class="col-lg-7 reveal reveal-delay-1">
+<form action="{{ route('contact.submit') }}" method="POST" class="form-ukmc" id="inquiryForm">
+@csrf
+<div class="row">
+<div class="col-md-6">
+<label for="fname">Full name</label>
+<input type="text" name="name" class="form-control" id="fname" placeholder="Enter your full name">
+</div>
+<div class="col-md-6">
+<label for="femail">Email address</label>
+<input type="email" name="email" class="form-control" id="femail" placeholder="Enter your email">
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
+<label for="fsubject">Course</label>
+<select name="subject_area" class="form-select" id="fsubject" >
+  <option value="">--Select course--</option>
+  <option value="BSc (Hons) Health & Social Care with Foundation Year">BSc (Hons) Health & Social Care with Foundation Year</option>
+  <option value="BSc (Hons) Psychology with Foundation Year">BSc (Hons) Psychology with Foundation Year</option>
+</select>
+</div>
+<div class="col-md-6">
+<label for="fyear">Earliest start year</label>
+<input type="text" name="earliest_start_year" class="form-control" id="fyear" placeholder="Enter earliest start year">
+</div>
+</div>
+<label for="fsituation">Current situation</label>
+<select name="currentsituation" class="form-select mb-3" id="fsituation">
+  <option value="">--Select current situation--</option>
+  <option value="School leaver">School leaver</option>
+  <option value="Career changer">Career changer</option>
+  <option value="Returning to education">Returning to education</option>
+  <option value="Working in a care role">Working in a care role</option>
+  <option value="Other">Other</option>
+</select>
+<div class="form-check mb-4">
+<input class="form-check-input" type="checkbox" id="fconsent">
+<label class="form-check-label" for="fconsent" style="font-family:'Roboto';font-weight:400;color:#fff;opacity:.85">
+    I agree to be contacted by UKMC Health about my registration, in line with the <a href="#" style="color:var(--ukmc-light-blue);text-decoration:underline">Privacy Policy</a>.
+</label>
+</div>
+<button type="submit" class="btn btn-ukmc-primary w-100">Submit</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+
+
 <!-- ========================= Form start ========================= -->
-<section class="subscribe-section pt-100 pb-100 theme-bg" style="background: var(--ukmc-off-white);">
+{{-- <section class="subscribe-section pt-100 pb-100 theme-bg" style="background: var(--ukmc-off-white);">
     <div class="container">
         <div class="row">
             <div class="col-xl-12">
@@ -92,14 +153,12 @@ a{color:var(--ukmc-blue);text-decoration:none} a:hover{color:var(--ukmc-red-deep
                 <div class="subscribe-wrapper">
                    <form action="{{ route('contact.submit') }}" method="POST" class="subscribe-from">
 							@csrf
-                        <input type="text" name="name" id="name" placeholder="Enter Your Name">
-                        <input type="text" name="email" id="email" placeholder="Enter Your Email">
+                        <input type="text" name="name" id="name" placeholder="Enter Your Name" required>
+                        <input type="text" name="email" id="email" placeholder="Enter Your Email" required>
                         <select name="subject_area" class="form-select form-select-lg" required>
-                            <option value="">--Select Subject Area-- </option>
-                            <option value="Medical Sciences BSc (Hons), with Foundation Year route">Medical Sciences BSc (Hons), with Foundation Year route</option>
-                            <option value="Health Foundation Year: Nursing pathway">Health Foundation Year: Nursing pathway</option>
-                            <option value="Health Foundation Year: Allied Health pathway">Health Foundation Year: Allied Health pathway</option>
-                            <option value="Health & Social Care Diplomas, including Residential Childcare">Health & Social Care Diplomas, including Residential Childcare</option>
+                            <option value="">--Select Course-- </option>
+                            <option value="BSc (Hons) Health & Social Care with Foundation Year">BSc (Hons) Health & Social Care with Foundation Year</option>
+                            <option value="BSc (Hons) Psychology with Foundation Year">BSc (Hons) Psychology with Foundation Year</option>
                         </select>
                         <input type="text" name="earliest_start_year" id="earliest_start_year" placeholder="Enter Earliest Start Year">
                         <select name="currentsituation" id="currentsituation"class="form-select form-select-lg" required>
@@ -110,6 +169,14 @@ a{color:var(--ukmc-blue);text-decoration:none} a:hover{color:var(--ukmc-red-deep
                             <option value="Returning to study">Returning to study</option>
                             <option value="other">other</option>
                         </select>
+
+                        <div class="form-check mb-4">
+                          <input class="form-check-input" type="checkbox" id="fconsent">
+                          <label class="form-check-label" for="fconsent" style="font-family:'Roboto';font-weight:400;color:#000;opacity:.85">
+                                        I agree to be contacted by UKMC Health about my registration, in line with the <a href="#" style="color:var(--ukmc-blue-deep);text-decoration:underline">Privacy Policy</a>.
+                          </label>
+                      </div>
+
                         <button class="btn theme-btn bg-white text-body" type="submit">Submit</button>
                     </form>
 
@@ -117,6 +184,6 @@ a{color:var(--ukmc-blue);text-decoration:none} a:hover{color:var(--ukmc-red-deep
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 <!-- ========================= Form end ========================= -->
 @endsection

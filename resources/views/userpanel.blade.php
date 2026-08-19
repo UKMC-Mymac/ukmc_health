@@ -374,6 +374,7 @@
  
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
 <script>
+	// Main nav
   const nav = document.getElementById('mainNav');
   window.addEventListener('scroll', () => {
     nav.style.boxShadow = window.scrollY > 8 ? '0 4px 20px rgba(21,32,113,.12)' : 'none';
@@ -411,6 +412,91 @@
         });
     @endif
 
+</script>
+
+<script>
+	// Register your interest form validation
+  document.getElementById('inquiryForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  let isValid = true;
+  const errors = {};
+
+  // Clear old error messages
+  document.querySelectorAll('.error-message').forEach(el => el.remove());
+  document.querySelectorAll('.error').forEach(el => el.classList.remove('error'));
+
+  // Helper to show an error under a field
+  function showError(fieldId, message) {
+    const field = document.getElementById(fieldId);
+    field.classList.add('error');
+    const errorEl = document.createElement('span');
+    errorEl.className = 'error-message';
+    errorEl.style.color = 'red';
+    errorEl.style.fontSize = '0.85em';
+    errorEl.style.display = 'block';
+    errorEl.textContent = message;
+    field.insertAdjacentElement('afterend', errorEl);
+    isValid = false;
+  }
+
+  // Name
+  const name = document.getElementById('fname').value.trim();
+  if (!name) {
+    showError('fname', 'Name is required.');
+  }
+
+  // Email
+  const email = document.getElementById('femail').value.trim();
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!email) {
+    showError('femail', 'Email is required.');
+  } else if (!emailPattern.test(email)) {
+    showError('femail', 'Please enter a valid email address.');
+  }
+
+  // Subject area
+  const subjectArea = document.getElementById('fsubject').value.trim();
+  if (!subjectArea) {
+    showError('fsubject', 'Subject area is required.');
+  }
+
+  // Earliest start year
+  const startYear = document.getElementById('fyear').value.trim();
+  const currentYear = new Date().getFullYear();
+  if (!startYear) {
+    showError('fyear', 'Earliest start year is required.');
+  } else if (isNaN(startYear) || parseInt(startYear) < currentYear) {
+    showError('fyear', `Please enter a valid year (${currentYear} or later).`);
+  }
+
+  // Current situation
+  const currentSituation = document.getElementById('fsituation').value.trim();
+  if (!currentSituation) {
+    showError('fsituation', 'Current situation is required.');
+  }
+
+  // Consent checkbox
+  const consent = document.getElementById('fconsent').checked;
+  if (!consent) {
+    const checkbox = document.getElementById('fconsent');
+    checkbox.classList.add('error');
+    const errorEl = document.createElement('span');
+    errorEl.className = 'error-message';
+    errorEl.style.color = 'red';
+    errorEl.style.fontSize = '0.85em';
+    errorEl.style.display = 'block';
+    errorEl.textContent = 'You must consent to the terms before submitting.';
+    checkbox.parentElement.appendChild(errorEl);
+    isValid = false;
+  }
+
+  if (isValid) {
+    // Passed validation — submit or handle as needed
+    console.log('Form is valid, submitting...');
+    this.submit(); // uncomment if you want a real form submission
+  }
+});
 </script>
 </body>
 

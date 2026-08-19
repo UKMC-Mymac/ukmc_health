@@ -132,8 +132,12 @@ a{color:var(--ukmc-blue);text-decoration:none} a:hover{color:var(--ukmc-red-deep
       </div>
     </div>
     <div class="hero-collage mt-4 reveal in-view">
-      <div class="hero-img-main">IMAGE NEEDED — real photo of Health &amp; Social Care students in a learning setting</div>
-      <div class="hero-img-sub">IMAGE NEEDED — course intro video thumbnail</div>
+      <div class="hero-img-main">
+        <img src="{{ asset('front/assets/img/course/health-and-social-care-banner.jpg') }}" alt="BSc (Hons) Health and Social Care with Foundation Year">
+      </div>
+      <div class="hero-img-sub">
+        <img src="{{ asset('front/assets/img/course/BSc (Hons) Health and Social Care course.jpg') }}" alt="BSc (Hons) Health and Social Care with Foundation Year">
+      </div>
     </div>
   </div>
 </header>

@@ -312,7 +312,9 @@ a{color:var(--ukmc-blue);text-decoration:none} a:hover{color:var(--ukmc-red-deep
   <div class="container-xxl">
     <div class="row g-5 align-items-center">
       <div class="col-lg-7 reveal">
-        <div class="map-frame-light">IMAGE NEEDED — embedded campus map</div>
+        <div class="map-frame-light">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2374.78651445139!2d-2.166488624005362!3d53.47227536529459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bb3d79636a91b%3A0xbb7227ab1eb34b02!2sUK%20Management%20College%2C%20College%20House%20Campus!5e0!3m2!1sen!2sbd!4v1787119473024!5m2!1sen!2sbd" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
       </div>
       <div class="col-lg-5 reveal reveal-delay-1">
         <span class="eyebrow">Find us</span>

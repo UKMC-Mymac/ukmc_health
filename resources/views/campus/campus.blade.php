@@ -266,13 +266,19 @@ a{color:var(--ukmc-blue);text-decoration:none} a:hover{color:var(--ukmc-red-deep
     </div>
     <div class="row g-4">
       <div class="col-md-4 reveal">
-        <div class="gallery-frame">IMAGE NEEDED — clinical skills space</div>
+        <div class="gallery-frame">
+          <img src="{{ asset('front/assets/img/course/campus-page.jpg') }}" alt="campus">
+        </div>
       </div>
       <div class="col-md-4 reveal reveal-delay-1">
-        <div class="gallery-frame">IMAGE NEEDED — teaching equipment</div>
+        <div class="gallery-frame">
+          <img src="{{ asset('front/assets/img/course/BSc (Hons) Health and Social Care course.jpg') }}" alt="campus">
+        </div>
       </div>
       <div class="col-md-4 reveal reveal-delay-2">
-        <div class="gallery-frame">IMAGE NEEDED — study and social space</div>
+        <div class="gallery-frame">
+          <img src="{{ asset('front/assets/img/course/bsc-hons-psychology-with-foundation-year course.jpg') }}" alt="campus">
+        </div>
       </div>
     </div>
   </div>
