@@ -13,6 +13,7 @@ class Contact extends Model
         'email',
         'subject_area',
         'earliest_start_year',
+        'preferred_intake',
         'currentsituation',
     ];
 }

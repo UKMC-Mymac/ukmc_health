@@ -357,6 +357,15 @@ a{color:var(--ukmc-blue);text-decoration:none} a:hover{color:var(--ukmc-red-deep
 <input type="text" name="earliest_start_year" class="form-control" id="fyear" placeholder="Enter earliest start year">
 </div>
 </div>
+
+<div class="row">
+<div class="col-md-6">
+                <label for="cfintake">Preferred intake</label>
+                <select name="preferred_intake" id="cfintake" class="form-select">
+                  <option>January 2027</option><option>May 2027</option><option>September 2027</option>
+                </select>
+              </div>
+<div class="col-md-6">
 <label for="fsituation">Current situation</label>
 <select name="currentsituation" class="form-select mb-3" id="fsituation">
   <option value="">--Select current situation--</option>
@@ -366,6 +375,11 @@ a{color:var(--ukmc-blue);text-decoration:none} a:hover{color:var(--ukmc-red-deep
   <option value="Working in a care role">Working in a care role</option>
   <option value="Other">Other</option>
 </select>
+</div>
+</div>
+
+
+
 <div class="form-check mb-4">
 <input class="form-check-input" type="checkbox" id="fconsent">
 <label class="form-check-label" for="fconsent" style="font-family:'Roboto';font-weight:400;color:#fff;opacity:.85">

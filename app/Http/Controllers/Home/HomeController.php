@@ -106,12 +106,15 @@ class HomeController extends Controller
     public function submitForm(Request $request)
     {
 
+   
+
 
         $request->validate([
             'name' => 'required',
             'email' => 'required|email',
             'subject_area' => 'required',
             'earliest_start_year' => 'required',
+            'preferred_intake' => 'required',
             'currentsituation' => 'required',
         ]);
 
@@ -120,6 +123,7 @@ class HomeController extends Controller
         $contact->email = $request->email;
         $contact->subject_area = $request->subject_area;
         $contact->earliest_start_year = $request->earliest_start_year;
+        $contact->preferred_intake = $request->preferred_intake;
         $contact->currentsituation = $request->currentsituation;
 
         $contact->save();
@@ -128,11 +132,13 @@ class HomeController extends Controller
             'email' => $request->email,
             'subject_area' => $request->subject_area,
             'earliest_start_year' => $request->earliest_start_year,
+            'preferred_intake' => $request->preferred_intake,
             'currentsituation' => $request->currentsituation,
         ];
         // Send email to admin
         // try {
         Mail::to($contact->email)->send(new ContactMail($details));
+        Mail::to('recruitment@ukmc.ac.uk')->send(new ContactMail($details));
 
         // } catch (\Exception $e) {
         //     return redirect()->back()->with('error', 'Failed to send email. Please try again later.');

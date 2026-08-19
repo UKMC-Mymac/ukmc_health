@@ -40,7 +40,11 @@
 	// Get the navbar
 
 	//======= tiny slider for slider-active
-	tns({
+
+	var sliderElement = document.querySelector('.slider-active');
+	if (sliderElement) {
+		var slider = tns({
+	
 		container: '.slider-active',
 		items: 1,
 		slideBy: 'page',
@@ -51,6 +55,7 @@
 		controls: false,
 		autoplayButtonOutput: false,
 	});
+	}
 
 	// for menu scroll 
 	// var pageLink = document.querySelectorAll('.page-scroll');

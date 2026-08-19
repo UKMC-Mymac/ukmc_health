@@ -91,7 +91,7 @@
 <li class="nav-item"><a class="nav-link {{ request()->is('why-us') ? 'active' : '' }}" href="{{ url('/why-us') }}">Why UKMC Health</a></li>
 <li class="nav-item"><a class="nav-link {{ request()->is('campus') ? 'active' : '' }}" href="{{ url('/campus') }}">Campus</a></li>
 <li class="nav-item"><a class="nav-link {{ request()->is('about') ? 'active' : '' }}" href="{{ url('/about') }}">About</a></li>
-<li class="nav-item"><a class="nav-link" href="{{ url('/contact') }}">Contact</a></li>
+<li class="nav-item"><a class="nav-link {{ request()->is('contact') ? 'active' : '' }}" href="{{ url('/contact') }}">Contact</a></li>
 </ul>
 <a href="{{ url('register') }}" class="btn btn-ukmc-primary">Register your interest</a>
 </div>
@@ -111,7 +111,7 @@
 <li class="nav-item"><a class="nav-link {{ request()->is('why-us') ? 'active' : '' }}" href="{{ url('/why-us') }}">Why UKMC Health</a></li>
 <li class="nav-item"><a class="nav-link {{ request()->is('campus') ? 'active' : '' }}" href="{{ url('/campus') }}">Campus</a></li>
 <li class="nav-item"><a class="nav-link {{ request()->is('about') ? 'active' : '' }}" href="{{ url('/about') }}">About</a></li>
-<li class="nav-item"><a class="nav-link" href="{{ url('/contact') }}">Contact</a></li>
+<li class="nav-item"><a class="nav-link {{ request()->is('contact') ? 'active' : '' }}" href="{{ url('/contact') }}">Contact</a></li>
 </ul>
 <a href="{{ url('register') }}" class="btn btn-ukmc-primary w-100 mt-4">Register your interest</a>
 </div>
@@ -376,15 +376,18 @@
 <script>
 	// Main nav
   const nav = document.getElementById('mainNav');
+  if(nav){
   window.addEventListener('scroll', () => {
     nav.style.boxShadow = window.scrollY > 8 ? '0 4px 20px rgba(21,32,113,.12)' : 'none';
   });
-  const observer = new IntersectionObserver((entries) => {
+}
+
+  const revealobserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) { entry.target.classList.add('in-view'); observer.unobserve(entry.target); }
+      if (entry.isIntersecting) { entry.target.classList.add('in-view'); revealobserver.unobserve(entry.target); }
     });
   }, { threshold: 0.12 });
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  document.querySelectorAll('.reveal').forEach(el => revealobserver.observe(el));
 </script>
 
 	<!-- ========================= JS here ========================= -->
