@@ -3,10 +3,15 @@
 namespace App\Http\Controllers\Home;
 
 use App\Http\Controllers\Controller;
-use App\Mail\ContactMail;
+use App\Mail\CompanyMail;
+use App\Mail\UserMail;
+
 use Illuminate\Http\Request;
 use App\Models\Contact\Contact;
+use App\Models\ContactPage;
 use Illuminate\Support\Facades\Mail;
+use App\Mail\ContactPageMail;
+use App\Models\User;
 use Illuminate\Support\Facades\Session;
 
 
@@ -105,10 +110,6 @@ class HomeController extends Controller
 
     public function submitForm(Request $request)
     {
-
-   
-
-
         $request->validate([
             'name' => 'required',
             'email' => 'required|email',
@@ -137,12 +138,55 @@ class HomeController extends Controller
         ];
         // Send email to admin
         // try {
-        Mail::to($contact->email)->send(new ContactMail($details));
-        Mail::to('recruitment@ukmc.ac.uk')->send(new ContactMail($details));
+        Mail::to($contact->email)->send(new UserMail($details));
+        // Mail::to('recruitment@ukmc.ac.uk')->send(new ContactMail($details));
+        Mail::to('saidulislam0400@gmail.com')->send(new CompanyMail($details));
+
 
         // } catch (\Exception $e) {
         //     return redirect()->back()->with('error', 'Failed to send email. Please try again later.');
         // }
+        return redirect()->back()->with('success', 'Your email has been sent successfully!');
+    }
+
+
+    public function submitContactForm(Request $request)
+    {
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required|email',
+            'phone' => 'required',
+            'subject_area' => 'required',
+            'preferred_intake' => 'required',
+            'preferred_campus' => 'required',
+            'message' => 'required',
+        ]);
+
+        $contactPage = new ContactPage();
+        $contactPage->name = $request->name;
+        $contactPage->email = $request->email;
+        $contactPage->phone = $request->phone;
+        $contactPage->subject_area = $request->subject_area;
+        $contactPage->preferred_intake = $request->preferred_intake;
+        $contactPage->preferred_campus = $request->preferred_campus;
+        $contactPage->message = $request->message;
+
+        $contactPage->save();
+
+        $newdetails = [
+            'name' => $request->name,
+            'email' => $request->email,
+            'phone' => $request->phone,
+            'subject_area' => $request->subject_area,
+            'preferred_intake' => $request->preferred_intake,
+            'preferred_campus' => $request->preferred_campus,
+            'message' => $request->message,
+        ];
+
+        // Send email to admin
+        Mail::to($contactPage->email)->send(new ContactPageMail($newdetails, 'user'));
+        Mail::to('saidulislam0400@gmail.com')->send(new ContactPageMail($newdetails, 'company'));
+
         return redirect()->back()->with('success', 'Your email has been sent successfully!');
     }
 }

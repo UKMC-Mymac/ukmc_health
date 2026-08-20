@@ -244,7 +244,7 @@ a{color:var(--ukmc-blue);text-decoration:none} a:hover{color:var(--ukmc-red-deep
     <div class="row justify-content-center reveal reveal-delay-1">
       <div class="col-lg-9">
         <div class="big-form-wrap">
-          <form action="{{ route('contact.submit') }}" method="POST" class="subscribe-from">
+          <form action="{{ route('submit-contact') }}" method="POST" class="subscribe-from">
 			@csrf
             <div class="row">
               <div class="col-md-6">
@@ -261,7 +261,7 @@ a{color:var(--ukmc-blue);text-decoration:none} a:hover{color:var(--ukmc-red-deep
             <div class="row">
               <div class="col-md-6">
                 <label for="cfphone">Phone *</label>
-                <input type="tel" id="cfphone" placeholder="Enter you phone"  class="form-control">
+                <input name="phone" type="tel" id="cfphone" placeholder="Enter you phone"  class="form-control">
               </div>
               <div class="col-md-6">
                 <label for="cfcourse">Which course are you interested in? *</label>
@@ -277,13 +277,13 @@ a{color:var(--ukmc-blue);text-decoration:none} a:hover{color:var(--ukmc-red-deep
             <div class="row">
               <div class="col-md-6">
                 <label for="cfintake">Preferred intake</label>
-                <select id="cfintake" class="form-select">
+                <select name="preferred_intake" id="cfintake" class="form-select">
                   <option>January 2027</option><option>May 2027</option><option>September 2027</option>
                 </select>
               </div>
               <div class="col-md-6">
                 <label for="cfcampus">Preferred campus</label>
-                <select id="cfcampus" class="form-select">
+                <select name="preferred_campus" id="cfcampus" class="form-select">
                   <option value="Manchester">Manchester</option>
 				  <option value="Derby">Derby</option>
 				  <option value="Sunderland">Sunderland</option>
@@ -292,7 +292,7 @@ a{color:var(--ukmc-blue);text-decoration:none} a:hover{color:var(--ukmc-red-deep
               </div>
             </div>
             <label for="cfmessage">Your message</label>
-            <textarea id="cfmessage" rows="5" placeholder="Tell us a bit about what you'd like to know" class="form-control"></textarea>
+            <textarea name="message" id="cfmessage" rows="5" placeholder="Tell us a bit about what you'd like to know" class="form-control"></textarea>
             <div class="form-check mb-4 mt-1">
               <input class="form-check-input" type="checkbox" id="cfconsent">
               <label class="form-check-label" for="cfconsent" style="font-family:'Roboto';font-weight:400;font-size:14px;color:var(--ukmc-gray)">

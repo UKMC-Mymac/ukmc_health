@@ -21,6 +21,7 @@ Route::controller(HomeController::class)->group(function () {
     Route::get('/contact', 'contact');
     Route::get('/register', 'register');
     Route::post('/contact/submit', [HomeController::class, 'submitForm'])->name('contact.submit');
+    Route::post('/submit-contact', [HomeController::class, 'submitContactForm'])->name('submit-contact');
 });
 
 Route::get('/clear', function () {

@@ -10,19 +10,23 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class ContactMail extends Mailable
+class UserMail extends Mailable
 {
     public $details;
+    
 
     public function __construct($details)
     {
         $this->details = $details;
     }
 
+
+
+
     public function build()
     {
         return $this
-            ->subject('UKMCSH')
-            ->view('emails.contact');
+            ->subject('Thank You for Your Enquiry – UKMC Health')
+            ->view('emails.user');
     }
 }
