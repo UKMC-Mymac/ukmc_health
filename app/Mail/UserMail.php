@@ -13,7 +13,7 @@ use Illuminate\Queue\SerializesModels;
 class UserMail extends Mailable
 {
     public $details;
-    
+
 
     public function __construct($details)
     {
@@ -27,6 +27,6 @@ class UserMail extends Mailable
     {
         return $this
             ->subject('Thank You for Your Enquiry – UKMC Health')
-            ->view('emails.user');
+            ->view('Emails.user');
     }
 }

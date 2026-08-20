@@ -68,6 +68,6 @@ class ContactPageMail extends Mailable
 
         return $this
             ->subject($subject)
-            ->view('emails.contactpage');
+            ->view('Emails.contactpage');
     }
 }
