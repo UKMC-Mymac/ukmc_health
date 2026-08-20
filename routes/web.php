@@ -33,7 +33,17 @@ Route::get('/clear', function () {
 
     return 'Cleared!';
 });
-//auto save option 
+//auto save option
 Route::get('/migrate', function () {
     return Artisan::call('migrate', ['--force' => true]);
+});
+
+Route::get('/cache', function () {
+    Artisan::call('cache:clear');
+    Artisan::call('config:clear');
+    Artisan::call('config:cache');
+    Artisan::call('view:clear');
+    Artisan::call('optimize:clear');
+
+    return 'Cleared!';
 });

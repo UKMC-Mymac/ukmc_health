@@ -266,6 +266,7 @@ a{color:var(--ukmc-blue);text-decoration:none} a:hover{color:var(--ukmc-red-deep
               <div class="col-md-6">
                 <label for="cfcourse">Which course are you interested in? *</label>
                 <select name="subject_area" id="cfcourse" class="form-select">
+                  <option value="">--Select course--</option>
                   <option value="BSc (Hons) Health &amp; Social Care with Foundation Year">BSc (Hons) Health &amp; Social Care with Foundation Year</option>
                   <option value="BSc (Hons) Psychology with Foundation Year">BSc (Hons) Psychology with Foundation Year</option>
                   <option value="Not sure yet">Not sure yet</option>
@@ -278,6 +279,7 @@ a{color:var(--ukmc-blue);text-decoration:none} a:hover{color:var(--ukmc-red-deep
               <div class="col-md-6">
                 <label for="cfintake">Preferred intake</label>
                 <select name="preferred_intake" id="cfintake" class="form-select">
+                  <option value="">--Select Preferred intak--</option>
                   <option value="January 2027">January 2027</option>
                   <option value="May 2027">May 2027</option>
                   <option value="September 2027">September 2027</option>
@@ -286,6 +288,7 @@ a{color:var(--ukmc-blue);text-decoration:none} a:hover{color:var(--ukmc-red-deep
               <div class="col-md-6">
                 <label for="cfcampus">Preferred campus</label>
                 <select name="preferred_campus" id="cfcampus" class="form-select">
+                  <option value="">--Select Preferred campus--</option>
                   <option value="Manchester">Manchester</option>
                   <option value="Derby">Derby</option>
                   <option value="Sunderland">Sunderland</option>

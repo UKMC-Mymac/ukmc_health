@@ -13,8 +13,6 @@ use Illuminate\Queue\SerializesModels;
 
 class CompanyMail extends Mailable
 {
-
-
     public $details;
 
 
@@ -22,9 +20,6 @@ class CompanyMail extends Mailable
     {
         $this->details = $details;
     }
-
-
-
 
     public function build()
     {
