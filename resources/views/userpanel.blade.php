@@ -320,20 +320,22 @@
     showError('cfintake', 'Preferred intake is required.');
   }
 
-  // Consent checkbox
-  const consent = document.getElementById('fconsent').checked;
-  if (!consent) {
-    const checkbox = document.getElementById('fconsent');
-    checkbox.classList.add('error');
-    const errorEl = document.createElement('span');
-    errorEl.className = 'error-message';
-    errorEl.style.color = 'red';
-    errorEl.style.fontSize = '0.85em';
-    errorEl.style.display = 'block';
-    errorEl.textContent = 'You must consent to the terms before submitting.';
-    checkbox.parentElement.appendChild(errorEl);
-    isValid = false;
-  }
+	// Consent checkbox (support multiple possible checkbox IDs)
+	const consentEl = document.getElementById('fconsent') || document.getElementById('hfconsent') || document.getElementById('cfconsent');
+	const consent = consentEl ? consentEl.checked : false;
+	if (!consent) {
+		if (consentEl) {
+			consentEl.classList.add('error');
+			const errorEl = document.createElement('span');
+			errorEl.className = 'error-message';
+			errorEl.style.color = 'red';
+			errorEl.style.fontSize = '0.85em';
+			errorEl.style.display = 'block';
+			errorEl.textContent = 'You must consent to the terms before submitting.';
+			consentEl.parentElement.appendChild(errorEl);
+		}
+		isValid = false;
+	}
 
   if (isValid) {
     // Passed validation — submit or handle as needed

@@ -139,8 +139,8 @@ class HomeController extends Controller
         // Send email to admin
         // try {
         Mail::to($contact->email)->send(new UserMail($details));
-        // Mail::to('recruitment@ukmc.ac.uk')->send(new ContactMail($details));
-        Mail::to('saidulislam0400@gmail.com')->send(new CompanyMail($details));
+        // Mail::to('saidulislam0400@gmail.com')->send(new CompanyMail($details));
+        Mail::to('recruitment@ukmc.ac.uk')->send(new CompanyMail($details));
 
 
         // } catch (\Exception $e) {
@@ -185,7 +185,8 @@ class HomeController extends Controller
 
         // Send email to admin
         Mail::to($contactPage->email)->send(new ContactPageMail($newdetails, 'user'));
-        Mail::to('saidulislam0400@gmail.com')->send(new ContactPageMail($newdetails, 'company'));
+        // Mail::to('saidulislam0400@gmail.com')->send(new ContactPageMail($newdetails, 'company'));
+        Mail::to('recruitment@ukmc.ac.uk')->send(new ContactPageMail($newdetails, 'company'));
 
         return redirect()->back()->with('success', 'Your email has been sent successfully!');
     }

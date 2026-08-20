@@ -63,7 +63,7 @@ class ContactPageMail extends Mailable
 
     public function build()
     {
-        $subject = $this->recipientType === 'company' ? 'New Contact Enquiry – UKMC Health' . $this->newdetails['name'] : 'Thank You for Your Enquiry – UKMC Health';
+        $subject = $this->recipientType === 'company' ? 'New Contact Enquiry – UKMC Health - By : ' . $this->newdetails['name'] : 'Thank You for Your Enquiry – UKMC Health';
 
 
         return $this

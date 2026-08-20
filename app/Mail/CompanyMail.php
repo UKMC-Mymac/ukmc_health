@@ -29,7 +29,7 @@ class CompanyMail extends Mailable
     public function build()
     {
         return $this
-            ->subject('Thank You for Your Enquiry – UKMC Health')
+            ->subject('New Enquiry Received – UKMC Health')
             ->view('emails.company');
     }
 

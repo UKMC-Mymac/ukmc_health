@@ -277,8 +277,10 @@ a{color:var(--ukmc-blue);text-decoration:none} a:hover{color:var(--ukmc-red-deep
             <div class="row">
               <div class="col-md-6">
                 <label for="cfintake">Preferred intake</label>
-                <select id="cfintake" class="form-select">
-                  <option>January 2027</option><option>May 2027</option><option>September 2027</option>
+                <select name="preferred_intake" id="cfintake" class="form-select">
+                  <option value="January 2027">January 2027</option>
+                  <option value="May 2027">May 2027</option>
+                  <option value="September 2027">September 2027</option>
                 </select>
               </div>
               <div class="col-md-6">
