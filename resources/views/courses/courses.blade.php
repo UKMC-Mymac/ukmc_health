@@ -5,6 +5,7 @@
   .form-ukmc label{font-family:'Poppins';font-weight:600;font-size:14px;color:#fff;margin-bottom:6px;display:block}
 .form-ukmc .form-control, .form-ukmc .form-select{border-radius:10px;border:1px solid var(--ukmc-line);
   padding:13px 14px;margin-bottom:18px;transition:box-shadow .2s ease,border-color .2s ease}
+
 </style>
 
 
@@ -19,7 +20,7 @@
 <div class="col-lg-5">
 <div class="course-img-frame h-100">
 <span class="badge-ukmc">Foundation Year</span>
-	<img src="{{ asset('front/assets/img/course/BSc (Hons) Health and Social Care.jpg') }}" alt="BSc (Hons) Health and Social Care with Foundation Year">
+	<img src="{{ asset('front/assets/img/course/BSc-(Hons)-Health-and-Social-Care.jpg') }}" alt="BSc (Hons) Health and Social Care with Foundation Year">
 </div>
 </div>
 <div class="col-lg-7 p-4 p-lg-5">
@@ -234,12 +235,15 @@
 </div>
 
 <div class="row">
-<div class="col-md-6">
-                <label for="cfintake">Preferred intake</label>
-                <select name="preferred_intake" id="cfintake" class="form-select">
-                  <option>January 2027</option><option>May 2027</option><option>September 2027</option>
-                </select>
-              </div>
+  <div class="col-md-6">
+      <label for="cfintake">Preferred intake</label>
+      <select name="preferred_intake" id="cfintake" class="form-select">
+        <option value="">--Select Preferred intak--</option>
+        <option value="January 2027">January 2027</option>
+        <option value="May 2027">May 2027</option>
+        <option value="September 2027">September 2027</option>
+      </select>
+  </div>
 <div class="col-md-6">
 <label for="fsituation">Current situation</label>
 <select name="currentsituation" class="form-select mb-3" id="fsituation">

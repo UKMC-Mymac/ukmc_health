@@ -36,7 +36,7 @@
         <![endif]-->
 
 	<!-- ========================= preloader start ========================= -->
-	<div class="preloader">
+	{{-- <div class="preloader">
 		<div class="loader">
 			<div class="ytp-spinner">
 				<div class="ytp-spinner-container">
@@ -51,7 +51,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> --}}
 	<!-- preloader end -->
 
 	<!-- ========================= header start ========================= -->
@@ -116,175 +116,9 @@
 <a href="{{ url('register') }}" class="btn btn-ukmc-primary w-100 mt-4">Register your interest</a>
 </div>
 </div>
-	{{-- =============== --}}
-	{{-- <header id="home" class="header">
 
-		<div class="header-wrapper">
-				<div class="header-top theme-bg">
-					<div class="container">
-						<div class="row">
-							<div class="col-md-8">
-								<div class="header-top-left text-md-left">
-									<ul>
-										<li><a href="#"><i class="lni lni-phone"></i> +XXXXXXXXXXX1111</a></li>
-										<li><a href="#"><i class="lni lni-envelope"></i> demo@gmail.com1111</a></li>
-									</ul>
-								</div>
-							</div>
-							<div class="col-md-4">
-								<div class="header-top-right d-none d-md-block">
-									<ul>
-										<li><a href="#"><i class="lni lni-facebook-filled"></i></a></li>
-										<li><a href="#"><i class="lni lni-twitter-filled"></i></a></li>
-										<li><a href="#"><i class="lni lni-linkedin-original"></i></a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="navbar-area">
-					<div class="container">
-						<div class="row">
-							<div class="col-lg-9">
-
-								<nav class="navbar navbar-expand-lg">
-									<a class="navbar-brand" href="{{ url('/') }}">
-										<img src="{{ asset('front/assets/img/logo/ukmc.png') }}" alt="Logo">
-									</a>
-									<button  class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-										<span class="toggler-icon"></span>
-										<span class="toggler-icon"></span>
-										<span class="toggler-icon"></span>
-									</button>
-				
-									<div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
-										<ul id="nav" class="navbar-nav ml-auto">
-											<li class="nav-item ">
-												<a class="  py-2  {{ request()->is('/') ? 'active' : '' }}  " href={{ url('/') }}>Home</a>
-											</li>
-											 <li class="nav-item dropdown">
-												<a class="nav-link dropdown-toggle" href="{{ url('/programs') }}" role="button" data-bs-toggle="dropdown">Programs</a>
-												<ul class="dropdown-menu">
-													<li><a class="dropdown-item" href="#">Medical Sciences</a></li>
-													<li><a class="dropdown-item" href="#">Nursing Foundation Year</a></li>
-													<li><a class="dropdown-item" href="#">Allied Health Foundation Year</a></li>
-													<li><a class="dropdown-item" href="#">Health & Social Care Diplomas</a></li>
-												</ul>
-											</li> 
-											<li class="nav-item">
-												<a class=" py-2 {{ request()->is('program') ? 'active' : '' }}  " href="{{ url('/program') }}">Program</a>
-											</li>
-											<li class="nav-item">
-												<a class=" py-2 {{ request()->is('why-us') ? 'active' : '' }}  " href="{{ url('/why-us') }}">Why Us</a>
-											</li>
-											<li class="nav-item">
-												<a class=" py-2 {{ request()->is('campus') ? 'active' : '' }}  " href="{{ url('/campus') }}">Campus</a>
-											</li>
-											<li class="nav-item">
-												<a class=" py-2 {{ request()->is('about') ? 'active' : '' }}  " href="{{ url('/about') }}">About</a>
-											</li>
-											<li class="nav-item">
-												<a class=" py-2 {{ request()->is('contact') ? 'active' : '' }}  " href="{{ url('/contact') }}">Contact</a>
-											</li> 
-
-											
-										</ul>
-									</div> <!-- navbar collapse -->
-								</nav> <!-- navbar -->
-							</div>
-							<div class="col-lg-3">
-								<div class="d-flex justify-content-end">
-									<a class="px-2 btn cta_btn text-white mt-3 {{ request()->is('register') ? 'active' : '' }}   " href="{{ url('/register') }}">Register your interest</a>
-								</div>
-							</div>
-						</div> <!-- row -->
-					</div> <!-- container -->
-				</div> <!-- navbar area -->
-		</div>
-
-	</header> --}}
-	<!-- ========================= header end ========================= -->
-
-
-
-	<!--========================= we-do-section start========================= -->
 	@yield('content')
 
-
-	<!-- ========================= footer start ========================= -->
-	{{-- <footer class="footer pt-100 img-bg">
-		<div class="container">
-			<div class="footer-widget-wrapper">
-				<div class="row">
-					<div class="col-xl-4 col-lg-5 col-md-6">
-						<div class="footer-widget mb-30">
-							<a href="{{ url('/') }}" class="logo"><img src="{{ asset('front/assets/img/logo/ukmc.png') }}" alt=""></a>
-
-							<h5>UKMC SCHOOL OF HEALTH</5>
-							<p>Why "subject to validation"? UK degrees can only be awarded by recognised universities. Our degree and foundation year programmes are being developed for validation with an established UK university partner: a rigorous process that exists to protect students, and one we wouldn't want any other way. Our diploma programmes follow a separate route through regulated awarding organisations. Register your interest and we'll tell you the moment applications open.</p>
-
-							<!-- <div class="footer-social-links">
-								<ul>
-									<li><a href="#"><i class="lni lni-facebook-filled"></i></a></li>
-									<li><a href="#"><i class="lni lni-twitter-filled"></i></a></li>
-									<li><a href="#"><i class="lni lni-linkedin-original"></i></a></li>
-									<li><a href="#"><i class="lni lni-instagram-original"></i></a></li>
-								</ul>
-							</div> -->
-						</div>
-					</div>
-					<div class="col-xl-4 col-lg-5 col-md-6">
-						<div class="footer-widget mb-30">
-							<h4 class="text-white mb-2">Quick Link</h4>
-							<ul class="footer-links">
-								<li><a href="{{ url('/safeguarding') }}">Safeguarding</a></li>
-								<li><a href="{{ url('/complaints') }}">Complaints</a></li>
-								<li><a href="{{ url('/privacy') }}">Privacy</a></li>
-								<li><a href="{{ url('/cookie-policy') }}">Cookie Policy</a></li>
-								<li><a href="{{ url('/accessibility') }}">Accessibility </a></li>
-								<li><a href="{{ url('/equality-and-diversity') }}">Equality & Diversity</a></li>
-								<li><a href="{{ url('/contact') }}">Contact</a></li>
-							</ul>
-						</div>
-					</div>
-					<!-- <div class="col-xl-2 col-lg-3 col-md-5">
-						<div class="footer-widget mb-30">
-							<h4>Quick Link</h4>
-							<ul class="footer-links">
-								<li><a href="#">Cardiology</a></li>
-								<li><a href="#">Neurology</a></li>
-								<li><a href="#">Gastroenterology</a></li>
-								<li><a href="#">Routine Checkup</a></li>
-								<li><a href="#">Orthopedics</a></li>
-								<li><a href="#">Dental Surgery</a></li>
-							</ul>
-						</div>
-					</div> -->
-					<div class="col-xl-4 col-lg-12 col-md-7">
-						<div class="footer-widget mb-30">
-							<h4 class="text-white mb-3">Location</h4>
-							<div class="map-canvas">
-								<iframe class="map" id="gmap_canvas" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9499.146811051325!2d-2.163914!3d53.472272!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bb3d79636a91b%3A0xbb7227ab1eb34b02!2sUK%20Management%20College%2C%20College%20House%20Campus!5e0!3m2!1sen!2sbd!4v1782726459423!5m2!1sen!2sbd" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="copyright-area">
-				<p class="mb-0 text-center">Designed and Developed By <a href="https://ukmc.ac.uk/" rel="nofollow">UKMC</a></p>
-			</div>
-		</div>
-	</footer>
-	<!-- ========================= footer end ========================= -->
-
-
-	<!-- ========================= scroll-top ========================= -->
-	<a href="#" class="scroll-top">
-		<i class="lni lni-arrow-up"></i>
-	</a> --}}
-
-	<!-- FOOTER -->
 <footer>
 <div class="accreditation-strip">
 <div class="container-xxl d-flex flex-wrap align-items-center justify-content-center gap-4">
@@ -323,8 +157,8 @@
 			<div class="col-lg-2 col-md-6">
 				<h4>Courses</h4>
 				<ul class="list-unstyled">
-				<li><a href="https://ukmc.ac.uk/course-details/bsc-hons-health-social-care-with-foundation-year">Health and Social Care</a></li>
-				<li><a href="https://ukmc.ac.uk/course-details/bsc-hons-psychology-with-foundation-year">Psychology</a></li>
+				<li><a href="{{ url('/courses/bsc-hons-health-and-social-care-with-foundation-year') }}">Health and Social Care</a></li>
+				<li><a href="{{ url('/courses/bsc-hons-psychology-with-foundation-year') }}">Psychology</a></li>
 				</ul>
 			</div>
 		
@@ -371,6 +205,7 @@
 </div>
 </div>
 </footer>
+
  
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
 <script>
@@ -461,7 +296,7 @@
   // Subject area
   const subjectArea = document.getElementById('fsubject').value.trim();
   if (!subjectArea) {
-    showError('fsubject', 'Subject area is required.');
+    showError('fsubject', 'Course area is required.');
   }
 
   // Earliest start year
@@ -477,6 +312,12 @@
   const currentSituation = document.getElementById('fsituation').value.trim();
   if (!currentSituation) {
     showError('fsituation', 'Current situation is required.');
+  }
+
+  // Preferred intake
+  const preferred_intake = document.getElementById('cfintake').value.trim();
+  if (!preferred_intake) {
+    showError('cfintake', 'Preferred intake is required.');
   }
 
   // Consent checkbox

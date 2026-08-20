@@ -272,12 +272,12 @@ a{color:var(--ukmc-blue);text-decoration:none} a:hover{color:var(--ukmc-red-deep
       </div>
       <div class="col-md-4 reveal reveal-delay-1">
         <div class="gallery-frame">
-          <img src="{{ asset('front/assets/img/course/BSc (Hons) Health and Social Care course.jpg') }}" alt="campus">
+          <img src="{{ asset('front/assets/img/course/BSc-(Hons)-Health-and-Social-Care-course.jpg') }}" alt="campus">
         </div>
       </div>
       <div class="col-md-4 reveal reveal-delay-2">
         <div class="gallery-frame">
-          <img src="{{ asset('front/assets/img/course/bsc-hons-psychology-with-foundation-year course.jpg') }}" alt="campus">
+          <img src="{{ asset('front/assets/img/course/bsc-hons-psychology-with-foundation-year-course.jpg') }}" alt="campus">
         </div>
       </div>
     </div>

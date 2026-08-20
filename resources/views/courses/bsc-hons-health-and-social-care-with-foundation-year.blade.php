@@ -56,11 +56,11 @@ a{color:var(--ukmc-blue);text-decoration:none} a:hover{color:var(--ukmc-red-deep
 .hero-collage{position:relative;padding-bottom:60px}
 .hero-img-main{border-radius:20px;min-height:340px;background:linear-gradient(150deg,var(--ukmc-light-blue),var(--ukmc-yellow) 140%);
   display:flex;align-items:center;justify-content:center;text-align:center;color:rgba(21,32,113,.55);
-  font-family:'Poppins';font-weight:600;font-size:14px;padding:24px;box-shadow:0 24px 50px rgba(0,0,0,.3)}
+  font-family:'Poppins';font-weight:600;font-size:14px;padding:0px;box-shadow:0 24px 50px rgba(0,0,0,.3)}
 .hero-img-sub{position:absolute;bottom:0;right:24px;width:46%;min-height:150px;border-radius:16px;
   background:linear-gradient(150deg,#fff,var(--ukmc-off-white));border:1px solid var(--ukmc-line);
   display:flex;align-items:center;justify-content:center;text-align:center;color:var(--ukmc-gray);
-  font-family:'Poppins';font-weight:600;font-size:12.5px;padding:16px;box-shadow:0 20px 40px rgba(0,0,0,.25)}
+  font-family:'Poppins';font-weight:600;font-size:12.5px;padding:5px;box-shadow:0 20px 40px rgba(0,0,0,.25)}
 
 /* Sidebar */
 .sidebar-card{background:#fff;border:1px solid var(--ukmc-line);border-radius:20px;box-shadow:var(--ukmc-shadow);
@@ -133,10 +133,10 @@ a{color:var(--ukmc-blue);text-decoration:none} a:hover{color:var(--ukmc-red-deep
     </div>
     <div class="hero-collage mt-4 reveal in-view">
       <div class="hero-img-main">
-        <img src="{{ asset('front/assets/img/course/health-and-social-care-banner.jpg') }}" alt="BSc (Hons) Health and Social Care with Foundation Year">
+        <img src="{{ asset('front/assets/img/course/health-and-social-care-detail banner.jpg') }}" alt="BSc (Hons) Health and Social Care with Foundation Year">
       </div>
       <div class="hero-img-sub">
-        <img src="{{ asset('front/assets/img/course/BSc (Hons) Health and Social Care course.jpg') }}" alt="BSc (Hons) Health and Social Care with Foundation Year">
+        <img src="{{ asset('front/assets/img/course/BSc-(Hons)-Health-and-Social-Care-course.jpg') }}" alt="BSc (Hons) Health and Social Care with Foundation Year">
       </div>
     </div>
   </div>
@@ -420,24 +420,63 @@ a{color:var(--ukmc-blue);text-decoration:none} a:hover{color:var(--ukmc-red-deep
     </div>
     <div class="row justify-content-center reveal">
       <div class="col-lg-7">
-        <form class="form-ukmc bg-white p-4 p-lg-5 rounded-4" style="box-shadow:var(--ukmc-shadow)">
+        <form action="{{ route('contact.submit') }}" method="POST"  id="inquiryForm" class="form-ukmc bg-white p-4 p-lg-5 rounded-4" style="box-shadow:var(--ukmc-shadow)">
+			    @csrf
+            <div class="row">
+              <div class="col-md-6">
+                <label for="fname">Full name</label>
+				        <input type="text" name="name" class="form-control" id="fname" placeholder="Enter your full name">
+              </div>
+              <div class="col-md-6">
+                <label for="femail">Email address</label>
+				        <input type="email" name="email" class="form-control" id="femail" placeholder="Enter your email">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <label for="fsubject">Course</label>
+                <select name="subject_area" class="form-select" id="fsubject" >
+                <option value="">--Select course--</option>
+                <option value="BSc (Hons) Health & Social Care with Foundation Year">BSc (Hons) Health & Social Care with Foundation Year</option>
+                <option value="BSc (Hons) Psychology with Foundation Year">BSc (Hons) Psychology with Foundation Year</option>
+              </select>
+              </div>
+              <div class="col-md-6">
+                <label for="fyear">Earliest start year</label>
+				        <input type="text" name="earliest_start_year" class="form-control" id="fyear" placeholder="Enter earliest start year">
+              </div>
+            </div>
           <div class="row">
-            <div class="col-md-6"><label for="fname">Full name *</label><input type="text" class="form-control" id="fname"></div>
-            <div class="col-md-6"><label for="femail">Email address *</label><input type="email" class="form-control" id="femail"></div>
-          </div>
-          <div class="row">
-            <div class="col-md-6"><label for="fphone">Phone *</label><input type="tel" class="form-control" id="fphone"></div>
             <div class="col-md-6">
-              <label for="fintake">Preferred intake *</label>
-              <select class="form-select" id="fintake"><option>January 2027</option><option>May 2027</option><option>September 2027</option></select>
+              <label for="cfintake">Preferred intake</label>
+              <select name="preferred_intake" id="cfintake" class="form-select">
+                <option value="">--Select Preferred intak--</option>
+                <option value="January 2027">January 2027</option>
+                <option value="May 2027">May 2027</option>
+                <option value="September 2027">September 2027</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label for="fsituation">Current situation</label>
+              <select name="currentsituation" class="form-select mb-3" id="fsituation">
+              <option value="">--Select current situation--</option>
+              <option value="School leaver">School leaver</option>
+              <option value="Career changer">Career changer</option>
+              <option value="Returning to education">Returning to education</option>
+              <option value="Working in a care role">Working in a care role</option>
+              <option value="Other">Other</option>
+              </select>
             </div>
           </div>
-          <label for="fcampus">Preferred campus location *</label>
-          <select class="form-select mb-3" id="fcampus">
-            <option>College House, Manchester</option><option>Derby Campus</option><option>Sunderland Campus</option>
-          </select>
-          <button type="submit" class="btn btn-ukmc-primary w-100">Submit</button>
-        </form>
+
+            <div class="form-check mb-4 mt-1">
+              <input class="form-check-input" type="checkbox" id="hfconsent">
+              <label class="form-check-label" for="hfconsent" style="font-family:'Roboto';font-weight:400;font-size:14px;color:var(--ukmc-gray)">
+                I agree to be contacted by UKMC Health about my registration, in line with the <a href="#">Privacy Policy</a>.
+              </label>
+            </div>
+            <button type="submit" class="btn btn-ukmc-primary w-100">Submit</button>
+          </form>
       </div>
     </div>
   </div>

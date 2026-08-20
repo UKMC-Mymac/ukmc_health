@@ -277,7 +277,7 @@ a{color:var(--ukmc-blue);text-decoration:none} a:hover{color:var(--ukmc-red-deep
             <div class="row">
               <div class="col-md-6">
                 <label for="cfintake">Preferred intake</label>
-                <select name="preferred_intake" id="cfintake" class="form-select">
+                <select id="cfintake" class="form-select">
                   <option>January 2027</option><option>May 2027</option><option>September 2027</option>
                 </select>
               </div>
@@ -285,9 +285,9 @@ a{color:var(--ukmc-blue);text-decoration:none} a:hover{color:var(--ukmc-red-deep
                 <label for="cfcampus">Preferred campus</label>
                 <select name="preferred_campus" id="cfcampus" class="form-select">
                   <option value="Manchester">Manchester</option>
-				  <option value="Derby">Derby</option>
-				  <option value="Sunderland">Sunderland</option>
-				  <option value="Luton">Luton</option>
+                  <option value="Derby">Derby</option>
+                  <option value="Sunderland">Sunderland</option>
+                  <option value="Luton">Luton</option>
                 </select>
               </div>
             </div>
